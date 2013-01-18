@@ -1,0 +1,9 @@
+#! /bin/bash
+
+find . -name "*.md" -exec bash -c "pandoc -B header -A footer \$1 -o \$1.html" - {} \;
+
+find . -type f -name \*.md.html |  while read f; do mv -- "$f" "${f/%.md.html/.html}"; done
+
+find . -type f -name \*.html |  while read f; do mv -- "$f" "target/."; done
+
+rsync -rvz src/resources/* target/.

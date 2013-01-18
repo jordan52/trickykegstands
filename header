@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Drunk</title>
+	<link rel="stylesheet" href="blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="blueprint/print.css" type="text/css" media="print">
+  <!--[if IE]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->	
+	<link rel="stylesheet" href="blueprint/plugins/fancy-type-jordan/screen.css" type="text/css" media="screen, projection">
+</head>
+<body>
+	<div class="container">  
+		<img class="title" src="images/dimLogo.gif"/><h1 class="title"><a class="titleLink" href="index.html">Tricky Keg Stands</a></h1>
+		<h2 class="title">A collection of various and sundry things.</h2>
+		<hr>
+		<div class="span-7 colborder">
+		  <h6>Words:</h6>
+		  <a class="subLink" href="wordsIndex.html">essays, creative nonfiction and random shiz</a>
+		</div>
+		<div class="span-8 colborder">
+		  <h6>Projects:</h6>
+		  <a class="subLink" href="projectsIndex.html">bands, cars, nerd stuff</a>
+		</div>
+		<div class="span-7 last">
+		  <h6>Life:</h6>
+		  <a class="subLink" href="lifeIndex.html">photos, resume, etc.</a>
+		</div>
+		<hr>
+		<hr class="space">
+		<div class="span-15 prepend-1 colborder">
+			<!-- Content Starts -->	
+
