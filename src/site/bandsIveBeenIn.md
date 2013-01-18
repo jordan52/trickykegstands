@@ -4,9 +4,14 @@ oh yeah, i play guitar. These are some of my bands.
 
 * * * * *
 
+#### The Sorry People Aug 2011 - Present
+
+
+* * * * *
+
 #### Hired Gunns 2008-April 2009
 
-Same cover band, new singer\
+Same cover band, new singer
 
 * * * * *
 

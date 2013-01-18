@@ -24,7 +24,7 @@ romance novel.'" He stood slowly and held onto the bar. "You can't judge
 a book by its cover, but you sure as hell can judge a man by his book's
 cover."
 
-\
- \
+
+ 
 
 [Drink 7](theInventor7.html)

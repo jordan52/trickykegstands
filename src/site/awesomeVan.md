@@ -3,12 +3,12 @@ Awesome 84 GMC Van - best offer - \$352
 
 * * * * *
 
-Reply to: [sale-537891322@craigslist.org](contact.html)\
- Date: 2008-01-13, 2:32PM CST\
- \
- \
+Reply to: [sale-537891322@craigslist.org](contact.html)
+ Date: 2008-01-13, 2:32PM CST
+ 
+ 
  Running/driving 1984, GMC, Rally Sport, full sized van with approx 120k
-miles. Besides the new transmission, the van is in horrible shape.\
+miles. Besides the new transmission, the van is in horrible shape.
  Good for:
 
 -   Moving band equipment
@@ -26,10 +26,10 @@ Not so good for:
 I bought it to take the band on short tours. We named it Biggie because
 the trailer's name was Tupac. More recently, the van has been used to
 help buddies move, haul trash, launch a pontoon boat, and annoy my
-neighbors.\
+neighbors.
  I am completely serious about getting rid of it because the plates
 expire Jan 31. Therefore, any offers or clever disposal methods will be
-duly considered.\
+duly considered.
  For your convenience, I have attached pictures of the van up close and
 as seen from space.
 
@@ -38,19 +38,19 @@ as seen from space.
                           
   ----------------------- -----------------------------
 
-\
-\
+
+
 
 -   This item has been posted by-owner.
 -   Location: South County
 -   it's NOT ok to contact this poster with services or other commercial
     interests
 
-\
- PostingID: 537891322\
- \
+
+ PostingID: 537891322
+ 
 
 * * * * *
 
-\
+
  Back to [Craigslist Ads](craigslistAds.html)

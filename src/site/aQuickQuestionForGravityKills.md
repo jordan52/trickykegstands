@@ -1,7 +1,7 @@
 ### A Quick Question for Gravity Kills
 
-"What's that sound? You hear it? It's a funny squeaky sound." \
-- Aunt Bethany Griswold 1908-1998
+>"What's that sound? You hear it? It's a funny squeaky sound." 
+>- Aunt Bethany Griswold 1908-1998
 
 Seriously, what is that squeeky sound on some versions of "Guilty" by
 Gravity Kills?

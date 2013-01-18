@@ -19,7 +19,7 @@ real quiet.
 
 "Don't trust a girl who doesn't eat pancakes."
 
-\
- \
+
+
 
 [Drink 5](theInventor5.html)

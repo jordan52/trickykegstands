@@ -6,13 +6,6 @@ lets you use the computer as the joystick to control the servos:\
 
 * * * * *
 
-[
-
-]
-
-[
-
-]
 
 I built and adapter to plug my airtronics vgr4 into my mic input so I
 could use it to control the airplane in FMS (r/c airplane flight

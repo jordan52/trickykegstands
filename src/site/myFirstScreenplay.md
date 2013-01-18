@@ -15,23 +15,23 @@ speaks:
 I couldn't help but notice your left nipple is a little hairy while your
 right is perfectly smooth. Isn't that interesting?
 
-\
- \
+
+ 
 
 #### Aubrey
 
 That's what happens when you walk in on me before I'm finished plucking.
 You need to learn how to knock first.
 
-\
- \
+
+ 
 
 Faintly in the distance, a dog barks.
 
 #### THE END
 
-\
- \
- \
- \
+
+ 
+ 
+ 
  And now, my [second screenplay](mySecondScreenplay.html).

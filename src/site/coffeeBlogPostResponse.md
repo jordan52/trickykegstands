@@ -48,11 +48,11 @@ Your poor girlfriend had to listen to your whiney ass bitch about this
 for days. I can only imagine how much her eyes rolled when you sent her
 the link to your blog entry. Bless her heart.
 
-Always and forever,\
+Always and forever,
  Jordan
 
-\
- \
+
+ 
   
 
 ### Coming Clean
@@ -67,27 +67,27 @@ stranger who has never hit this site, and it had to show up in less than
 
 The following comment from a reader and my response explain it best:
 
-from: e.\
- to: me\
- date: Sun, Jul 20, 2008 at 3:22 PM\
+from: e.
+ to: me
+ date: Sun, Jul 20, 2008 at 3:22 PM
  subject: So let em get this straight
 
-The guys at Murky Coffee have two responsibilities, according to you:\
- 1. Make coffee\
+The guys at Murky Coffee have two responsibilities, according to you:
+ 1. Make coffee
  2. Test their customers to see if they are "cool enough" to be served
-with respect.\
+with respect.
 
 Am I getting this right?
 
-Your pal,\
+Your pal,
  E.
 
-\
 
-from me\
- to E.\
- date Mon, Jul 21, 2008 at 6:02 PM\
- subject Re: So let em get this straight\
+
+from me
+ to E.
+ date Mon, Jul 21, 2008 at 6:02 PM
+ subject Re: So let em get this straight
 
 Sadly, you are incorrect. I haven't seen the Murky Coffee employee
 handbook so I can't guess their responsibilities or core values. I just

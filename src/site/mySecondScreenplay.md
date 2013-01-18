@@ -12,18 +12,18 @@ pursed lips she turns to look at her partner. She speaks:
 Unless you can turn yourself into a pizza in the next 5 minutes you're
 going to have to get out.
 
-\
- \
+
+ 
 
 Steve's jaw drops. Faintly in the distance, a dog barks.
 
 #### THE END
 
-\
- \
- \
- \
- \
+
+ 
+ 
+ 
+ 
 
 I did not come up with the pizza line. I stole it. I'd give credit but
 I'm not sure he would want his name on this site. If you must know, let

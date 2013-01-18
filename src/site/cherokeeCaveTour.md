@@ -63,7 +63,7 @@ area.
 [![](media/spiralStaircase1_t.jpg)](media/spiralStaircase1.jpg)
 [![](media/spiralStaircase2_t.jpg)](media/spiralStaircase2.jpg)
 [![](media/spiralStaircase3_t.jpg)](media/spiralStaircase3.jpg)
-          \
+          
 
 This staircase was used by actors to get back stage during performances.
 Apparently, there wasn't much room for wardrobe changes behind the tiny
@@ -119,7 +119,7 @@ floor, that there is a passageway at the top. Some people in the group
 the cave. They got up in there only to find out it connected to another
 shaft which was blocked off with debris and red bricks.
 
-[![](media/verticalShaft_t.jpg)](media/verticalShaft.jpg) \
+[![](media/verticalShaft_t.jpg)](media/verticalShaft.jpg) 
 
  
 

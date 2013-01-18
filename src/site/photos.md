@@ -1,9 +1,9 @@
-office\
+office
  [![](photos/7_t.jpg)](photos/7.jpg) [![](photos/8_t.jpg)](photos/8.jpg)
 
 * * * * *
 
-mo-chi-mo\
+mo-chi-mo
  [![](photos/r1_t.jpg)](photos/r1.jpg)
 [![](photos/r2_t.jpg)](photos/r2.jpg)
 [![](photos/r3_t.jpg)](photos/r3.jpg)
@@ -13,7 +13,7 @@ mo-chi-mo\
 
 * * * * *
 
-raceday\
+raceday
  [![](photos/s1_t.jpg)](photos/s1.jpg)
 [![](photos/s2_t.jpg)](photos/s2.jpg)
 [![](photos/s3_t.jpg)](photos/s3.jpg)
@@ -24,14 +24,14 @@ raceday\
 
 * * * * *
 
-stoplights & powerlines\
+stoplights & powerlines
  [![](photos/b1_t.jpg)](photos/b1.jpg)
 [![](photos/b2_t.jpg)](photos/b2.jpg)
 [![](photos/b3_t.jpg)](photos/b3.jpg)
 
 * * * * *
 
-nyc\
+nyc
  [![](photos/e1_t.jpg)](photos/e1.jpg)
 [![](photos/e2_t.jpg)](photos/e2.jpg)
 [![](photos/e3_t.jpg)](photos/e3.jpg)
@@ -42,12 +42,12 @@ nyc\
 
 * * * * *
 
-goodmorning\
+goodmorning
  [![](photos/f1_t.jpg)](photos/f1.jpg)
 [![](photos/f2_t.jpg)](photos/f2.jpg)
 [![](photos/f3_t.jpg)](photos/f3.jpg)
 
-driving\
+driving
  [![](photos/12_t.jpg)](photos/12.jpg)
 [![](photos/13_t.jpg)](photos/13.jpg)
 [![](photos/15_t.jpg)](photos/15.jpg)
@@ -58,14 +58,14 @@ driving\
 
 * * * * *
 
-football\
+football
  [![](photos/21_t.jpg)](photos/21.jpg)
 [![](photos/23_t.jpg)](photos/23.jpg)
 [![](photos/28_t.jpg)](photos/28.jpg)
 
 * * * * *
 
-god?\
+god?
  [![](photos/t1_t.jpg)](photos/t1.jpg)
 [![](photos/t2_t.jpg)](photos/t2.jpg)
 [![](photos/t3_t.jpg)](photos/t3.jpg)
@@ -75,7 +75,7 @@ god?\
 
 * * * * *
 
-daddysno\
+daddysno
  [![](photos/a1_t.jpg)](photos/a1.jpg)
 [![](photos/a2_t.jpg)](photos/a2.jpg)
 [![](photos/a3_t.jpg)](photos/a3.jpg)
@@ -84,7 +84,7 @@ daddysno\
 
 * * * * *
 
-cali\
+cali
  [![](photos/c1_t.jpg)](photos/c1.jpg)
 [![](photos/c2_t.jpg)](photos/c2.jpg)
 [![](photos/c3_t.jpg)](photos/c3.jpg)
@@ -94,7 +94,7 @@ cali\
 
 * * * * *
 
-vegas\
+vegas
  [![](photos/d1_t.jpg)](photos/d1.jpg)
 [![](photos/d2_t.jpg)](photos/d2.jpg)
 [![](photos/d3_t.jpg)](photos/d3.jpg)

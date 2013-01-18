@@ -15,7 +15,7 @@ multiply R \* R to calculate the area of a circle, we'll wind up with
 not the area of the circle, but the area of a square that is 1/4 the
 size of the circle. Stay with me. Here is a picture:
 
-> ![](media/statsHandDrawing.jpg)\
+> ![](media/statsHandDrawing.jpg)
 >  Picture of 1/4 circle inside a square.
 
 We're getting somewhere. Imagine we could somehow subtract the excess
@@ -89,7 +89,7 @@ The code plots the points inside the circle in blue and those outside in
 red by calculating the point's distance from the origin. Here's the
 plot:
 
-> ![](media/statsCircle1000throws.jpg)\
+> ![](media/statsCircle1000throws.jpg)
 
 Sorry it is a little squished. That happened when I saved it as a jpg.
 Ignoring that, it looks a heck of a lot like a circle, no? Are we done?
@@ -112,7 +112,7 @@ the code:
 
 And here's the plot. Y axis is error, X is number of throws:
 
-> ![](media/statsAccuracy1to1000throws.jpg)\
+> ![](media/statsAccuracy1to1000throws.jpg)
 
 Notice how the error gets closer to zero with the more throws we make.
 Awesome! I think we just learned a lot about pi and a little bit about

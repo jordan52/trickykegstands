@@ -11,7 +11,7 @@ I said, "Really? Where?"
 
 "Yes."
 
-\
+
 
 This is where I'm going to slowly try to piece the trip back together.
 Now that I look back, we saw some crazy shit. It was pretty rad.
