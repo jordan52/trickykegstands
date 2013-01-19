@@ -49,7 +49,9 @@ of water. There were little, pale fishes in the water.
 
 ### The Lemp Caverns
 
-[![](media/lempSmall.jpg)](media/lemp.jpg) I'm sure you can find plenty
+[![](media/lempSmall.jpg)](media/lemp.jpg) 
+
+I'm sure you can find plenty
 of information about the history of the Lemp Caverns, so I'll spare you.
 I do want to note a few of the features we saw while down there which
 are highlighted on the map.
@@ -61,10 +63,14 @@ spiral staircase that led to the surface just behind the theatrical
 area.
 
 [![](media/spiralStaircase1_t.jpg)](media/spiralStaircase1.jpg)
+
 [![](media/spiralStaircase2_t.jpg)](media/spiralStaircase2.jpg)
+
 [![](media/spiralStaircase3_t.jpg)](media/spiralStaircase3.jpg)
           
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 This staircase was used by actors to get back stage during performances.
 Apparently, there wasn't much room for wardrobe changes behind the tiny
 stage so they would have to climb 34' to the surface to change their
@@ -79,12 +85,18 @@ decomposed into a heap of trash in the middle of the floor. The only
 thing left that reminds us of its original use are some stage lights
 hanging from the rocky ceiling.
 
+
 [![](media/theater1_t.jpg)](media/theater1.jpg)
+
+
 [![](media/theater2_t.jpg)](media/theater2.jpg)
+
+
 [![](media/theater3_t.jpg)](media/theater3.jpg)          
 
- 
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 #### The Iron Door
 
 I don't have any photos of the iron door, but there is a story about the
@@ -105,11 +117,15 @@ hoses on the floor. The last photo may or may not be the "refrigerator
 door."
 
 [![](media/fire1_t.jpg)](media/fire1.jpg)
+
 [![](media/fire2_t.jpg)](media/fire2.jpg)
+
 [![](media/fire3_t.jpg)](media/fire3.jpg)          
 
  
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 #### Vertical Shaft
 
 There is a giant, brick-lined shaft in the ceiling of one of the wide
@@ -121,8 +137,10 @@ shaft which was blocked off with debris and red bricks.
 
 [![](media/verticalShaft_t.jpg)](media/verticalShaft.jpg) 
 
- 
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 ### The Cherokee Cave
 
 [![](media/cherokeeCave_t.jpg)](media/cherokeeCave.jpg)
@@ -133,12 +151,16 @@ have 4 photos - The wishing well, some stairs, the "pit of death" and
 the concrete wall they put up when building hwy 55:
 
 [![](media/wishingWell_t.jpg)](media/wishingWell.jpg)
+
 [![](media/stairs_t.jpg)](media/stairs.jpg)
+
 [![](media/pitOfDeath_t.jpg)](media/pitOfDeath.jpg)
+
 [![](media/cherokeeWall_t.jpg)](media/cherokeeWall.jpg)
-
- 
-
+ <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 *To be continued...*
 
 By the way. Please, DO NOT try to get into these caves yourself. You'll

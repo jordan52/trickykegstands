@@ -1,10 +1,3 @@
-### etc.
-
--   [Forty Five Second Theories](fortyFiveSecondTheories.html)
--   [Some of My Favorite Words](favoriteWords.html)
-
-* * * * *
-
 ### twah
 
 -   [What's My Name](whatsMyName.html)
@@ -22,3 +15,10 @@
 ### resume
 
 -   [Resume](resume.html)
+
+### etc.
+
+-   [Forty Five Second Theories](fortyFiveSecondTheories.html)
+-   [Some of My Favorite Words](favoriteWords.html)
+
+* * * * *
