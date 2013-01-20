@@ -21,3 +21,7 @@
 
 ![Owls will fuck you up](media/owls/fuckYouUp.jpg)
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+[Otters hold hands when sleeping so they don't drift apart.](https://www.google.com/search?q=otters+holding+hands&hl=en&tbo=u&tbm=isch)

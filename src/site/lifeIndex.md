@@ -17,7 +17,7 @@
 -   [Resume](resume.html)
 
 ### etc.
-
+-   [Whiskey](whiskey.html)
 -   [Forty Five Second Theories](fortyFiveSecondTheories.html)
 -   [Some of My Favorite Words](favoriteWords.html)
 

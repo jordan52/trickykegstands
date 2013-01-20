@@ -22,7 +22,7 @@ As we walked in I threw out the, "Are you going to move or am I going to
 have to shove my arm in there to press my button?" look.
 
 Neither one could be bothered with moving so I squeezed in there and hit
-my button. I looked at the stressed out little hottie and asked, "Which
+thirteen. I looked at the stressed out little hottie and asked, "Which
 floor?"
 
 "Seven, please."
