@@ -28,6 +28,11 @@ shopping, children) and be surprisingly adequate.
  
  m:
 
+ wmh - "Then my daughter says, 'Dad, i didn't want to hit him, but punching him in the 
+ face was the only thing that could keep me from crying. So, I did, repeatedly.' The boy 
+ didn't seem to mind so the teacher let it slide. I don't know if I should put her in 
+ boxing classes or call a therapist."
+
  dr. mdb md,phd - has to ride the elevator to the first floor, then the
 top before getting off on his floor.
 

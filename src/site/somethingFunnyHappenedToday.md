@@ -1,5 +1,28 @@
 ### Something Funny Happened Today
 
+#### 20130205
+
+This page is taking a dark turn. Some background - 1) I was doing outdoorsy stuff with some 
+friends last weekend. 2) I do not drive behind school busses because during the summer when
+I was 16 I saw the aftermath of a highway accident where a car crashed into and
+under the back of a school bus. Later, I heard the driver died. From the look of the car,
+I'm sure he lost his head. I still refuse to follow school busses on the highway.
+
+Back to 1)  I'm doing outdoorsy stuff and I don't have an adequate coat (it is January. I am a 
+dumbass.) My friend says, "I might have a coat that fits you." And he does, and it
+is warm and it is much too big for him.  A few hours later I ask about the oversized coat
+i'm wearing and he says he's not sure if he should tell me and I say oh great, you've got to tell 
+me now. He says that his friend died in a car accident and his friend's father needed to 
+get rid of all his dead son's things because it hurt too much but he didn't want to throw 
+away a perfectly good coat. He gave it to my friend who didn't dare tell him it didn't 
+fit. 
+
+My friend asked if that weirded me out and I said no unless he was wearing the coat when 
+he died which is exactly when my friend said he was not because his friend was decapitated 
+when he drove under the back of a school bus on the highway. It was some kind of mess and 
+anyway it was summer so there's no way he was wearing a thick, warm coat.
+
+
 #### 20110105
 
 Taco Truck!
