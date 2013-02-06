@@ -1,4 +1,5 @@
 [Here's a lazy attempt at a blog.](someThoughts.html)
+[And, another.](todayILearned.html)
 
 ### This is Why Owls Freak Me Out
 
