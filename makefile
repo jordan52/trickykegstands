@@ -26,6 +26,9 @@ resources :
 deploy :
 	s3cmd sync --acl-public $(OUTDIR)/. s3://$(S3BUCKET)/
 
+til :
+	s3cmd sync --acl-public $(OUTDIR)/todayILearned.html s3://trickykegstands.com/
+
 # This generic rule accepts HTML targets with corresponding Markdown 
 # source, and makes them using pandoc
 $(OUTDIR)/%.html : $(MDDIR)/%.md $(MDDIR)

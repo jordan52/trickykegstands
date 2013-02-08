@@ -1,5 +1,52 @@
 ### Today I Learned
 
+#### 2013 02 08
+
+I'm oddly excited about using Quickbooks. Two hours with an accountant is enlightening.
+I wonder if, for example, 2 hours with a tow truck driver would be equally informative. How
+about 2 hours with a funeral director, or an arborist? I hang out with a gardener from time
+to time and you know what? It is fascinating.
+
+And holy shit, FDA documentation is a drag but the power keeps going out and the admin
+guys are losing their minds. Also, lots of chocolate milk and a surprise party tonight. 
+
+It is a good day.
+
+Here's the deal. If you're on a team and trying to do documentation don't use Word. Make a
+simple rule: Everyone writes everything in markdown and everything is committed to 
+bitbucket or github. This goes for specs, documentation, etc. If you need some sort of
+fancy font or table, provide a stylesheet or embed some html. Doing this solves a sundry
+of problems. (I wanted to say "sundried list of problems" but i don't know if sundried
+is a form of the adjective sundry and it looke like sun dried as in tomatoes. which are
+fan frikin' tastic by the way.)
+
+#### 2013 02 07
+
+I'm running on empty.
+
+If you're close to using all of your RAM, quit screwing around. Go out and buy some more!
+
+Pudenda... is it a real word? I'm at work so I can't look it up.
+
+I can't get the hearbeat task to run in my app. 
+
+Today I am... chatty. 
+
+Creating documentation for FDA regulated trials is a drag.
+
+How many people out there get some level of enjoyment out of making a joke that is either so
+meta or obscure that everyone listening thinks you are serious? This is one of my favorite
+things. Along those lines, sometimes I am bitter about growing up with a comically gifted 
+set of friends. Here's why. When someone makes an average joke and everyone sort of chuckles 
+I kind of want to smash their face with bricks. The joke was painfully obvious and there were
+a dozen other things they could have said that would have been funnier.
+
+Of course, I typically keep quiet because I know most of my jokes aren't that good.  
+
+This is a great D3 tutorial <http://alignedleft.com/tutorials/d3/>
+
+Mixpanel - using properties <https://mixpanel.com/docs/properties-or-segments/a-tutorial-on-using-properties>
+
 #### 2013 02 06
 
 I should purchase parts at a discount site and take them with me when I take a car in for repair. I
@@ -37,7 +84,7 @@ Nagios: 'taint pretty, but it gets the job done.
 
 #### 2013 01 12
 
-The Chippewa boots are really nice! I busted out my vintage, Made in England Doc Martens and cleaned
+The Chippewa boots are really nice! I busted out my vintage, made in England Doc Martens and cleaned
 them up. Now I have 2 pairs of boots. The docs are also very nice. I had no idea how good I had it
 back then. I've worn nothing but crap shoes for the past 10 years and, well, now I know the error of
 my ways. Also, wool socks are phenomenal. I used to only wear them snowboarding like they were only
