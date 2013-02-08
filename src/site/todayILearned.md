@@ -3,9 +3,12 @@
 #### 2013 02 08
 
 I'm oddly excited about using Quickbooks. Two hours with an accountant is enlightening.
-I wonder if, for example, 2 hours with a tow truck driver would be equally informative. How
+I wonder what, for example, 2 hours with a tow truck driver would teach me. How
 about 2 hours with a funeral director, or an arborist? I hang out with a gardener from time
-to time and you know what? It is fascinating.
+to time and you know what? It is fascinating. He'll show you one of his books (he's a reader)
+and you'll open it up and some sort of pressed leaf will fall out and he'll be like, "wow,
+let me have a look at that... Oh, yes, that's from a blah-blah-blah(latin) which a rare 
+species of blah blah (more latin). I think that tree was somewhere in Clayton. 
 
 And holy shit, FDA documentation is a drag but the power keeps going out and the admin
 guys are losing their minds. Also, lots of chocolate milk and a surprise party tonight. 
@@ -18,7 +21,14 @@ bitbucket or github. This goes for specs, documentation, etc. If you need some s
 fancy font or table, provide a stylesheet or embed some html. Doing this solves a sundry
 of problems. (I wanted to say "sundried list of problems" but i don't know if sundried
 is a form of the adjective sundry and it looke like sun dried as in tomatoes. which are
-fan frikin' tastic by the way.)
+fan frikin' tastic by the way.) You get your versioning under control, you don't have to
+worry about losing anything and you never have to deal with Word destroying your formatting.
+
+Fuck Word. Excel? You're still ok.
+
+The only beef I have with markdown is I can't ever decide how to deal with word wrapping.
+I do endlines manually right now instead of using an editor that wraps for me. Doing that is
+painful when editing, and i edit a lot (I know, doesn't seem like it, right?)
 
 #### 2013 02 07
 
