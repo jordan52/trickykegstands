@@ -2,10 +2,12 @@
 
 #### 2013 02 08
 
+<http://en.wikipedia.org/wiki/Saudade>
+
 I'm oddly excited about using Quickbooks. I spent two hours with an accountant this morning
-and it sort of changed my life (not really.) I wonder what else I could learn. For example, 
-what could I learn in 2 hours with a tow truck driver? How
-about 2 hours with a funeral director, or, I don't know, an arborist? 
+and it sort of changed my life (not really.) I wonder what else I could learn by hanging out
+with someone I normally wouldn't. For example, what could I learn in 2 hours with a tow truck 
+driver? How about 2 hours with a funeral director, or, I don't know, an arborist? 
 
 I hang out with a gardener from time
 to time and you know what? It is fascinating. One time he was showing me a book (he's a reader)
@@ -38,7 +40,10 @@ I do a site-wide spell check this whole thing is going to be riddled with typos.
 
 My toynabee tile has not survived the winter.
 
-I pulled this out of my checklist doc (private) because it doesn't belong there. It belongs here:
+this <http://selectadecision.info/> is kind of fun.
+
+I pulled this next thing out of my checklist doc (private) because it doesn't belong 
+there. It belongs here:
 
 Things to remember:
 
