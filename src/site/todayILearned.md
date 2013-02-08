@@ -38,6 +38,21 @@ I do a site-wide spell check this whole thing is going to be riddled with typos.
 
 My toynabee tile has not survived the winter.
 
+I pulled this out of my checklist doc (private) because it doesn't belong there. It belongs here:
+
+Things to remember:
+
+*  Kanban Board <http://en.wikipedia.org/wiki/Kanban_board>
+*  Watch "The 400 Blows" <http://en.wikipedia.org/wiki/The_400_Blows>
+*  This guy is a good photog <http://mrelllis.tumblr.com/>
+*  This is a good forum thread <http://supertalk.superfuture.com/index.php?/topic/33420-style-inspiration/page__st__2310>
+*  Learn more about superfuture.com
+
+The superfuture thing comes from something I read on /r/malefashionadvice regarding a boot choice
+and the fact that yes, someone could pull it off, but "you'd have to be so ridiculously on point
+you probably wouldn't be on MFA in the first place" and then someone mentioned superfuture and I 
+went there and kind of get it but not really.
+
 #### 2013 02 07
 
 I'm running on empty.
