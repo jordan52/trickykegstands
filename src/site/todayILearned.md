@@ -2,33 +2,41 @@
 
 #### 2013 02 08
 
-I'm oddly excited about using Quickbooks. Two hours with an accountant is enlightening.
-I wonder what, for example, 2 hours with a tow truck driver would teach me. How
-about 2 hours with a funeral director, or an arborist? I hang out with a gardener from time
-to time and you know what? It is fascinating. He'll show you one of his books (he's a reader)
-and you'll open it up and some sort of pressed leaf will fall out and he'll be like, "wow,
-let me have a look at that... Oh, yes, that's from a blah-blah-blah(latin) which a rare 
-species of blah blah (more latin). I think that tree was somewhere in Clayton. 
+I'm oddly excited about using Quickbooks. I spent two hours with an accountant this morning
+and it sort of changed my life (not really.) I wonder what else I could learn. For example, 
+what could I learn in 2 hours with a tow truck driver? How
+about 2 hours with a funeral director, or, I don't know, an arborist? 
+
+I hang out with a gardener from time
+to time and you know what? It is fascinating. One time he was showing me a book (he's a reader)
+and I opened it up and some sort of pressed leaf fell out and he was like, "Wow,
+let me have a look at that... Oh, yes, that's from a blah-blah-blah(latin) which is a rare 
+species of blah blah (more latin) typically found in (exotic location.) I was somewhere in 
+Clayton when I saw it. I was so excited I took a leaf." 
 
 And holy shit, FDA documentation is a drag but the power keeps going out and the admin
-guys are losing their minds. Also, lots of chocolate milk and a surprise party tonight. 
-
-It is a good day.
+guys are running around losing their minds. Today also includes lots of chocolate milk and there is
+a surprise party tonight. It is a good day.
 
 Here's the deal. If you're on a team and trying to do documentation don't use Word. Make a
 simple rule: Everyone writes everything in markdown and everything is committed to 
-bitbucket or github. This goes for specs, documentation, etc. If you need some sort of
+bitbucket or github. This goes for specs, documentation, whatever. If you need some sort of
 fancy font or table, provide a stylesheet or embed some html. Doing this solves a sundry
 of problems. (I wanted to say "sundried list of problems" but i don't know if sundried
-is a form of the adjective sundry and it looke like sun dried as in tomatoes. which are
+is a form of the adjective sundry and it looks like sun dried as in tomatoes. which are
 fan frikin' tastic by the way.) You get your versioning under control, you don't have to
 worry about losing anything and you never have to deal with Word destroying your formatting.
 
-Fuck Word. Excel? You're still ok.
+Fuck MS Word. Excel? Excel is fine. Powerpoint? Ppt is annoying (use markdown if you can.)
 
 The only beef I have with markdown is I can't ever decide how to deal with word wrapping.
-I do endlines manually right now instead of using an editor that wraps for me. Doing that is
-painful when editing, and i edit a lot (I know, doesn't seem like it, right?)
+I do carriage returns manually right now instead of using an editor that wraps for me. Doing that is
+painful when editing, and i edit a lot (I know, doesn't seem like it, right?) Maybe I have
+two beefs, but not with markdown per se. My
+editor is an IDE which barely has spell check. My mac doesn't have spell, So, well, until
+I do a site-wide spell check this whole thing is going to be riddled with typos. yay.
+
+My toynabee tile has not survived the winter.
 
 #### 2013 02 07
 
