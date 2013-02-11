@@ -1,5 +1,55 @@
 ### Today I Learned
 
+#### 2013 02 11
+
+Frank Ocean is a little rough around the edges when it comes to Grammy performances. I should have
+watched. Instead I was working.
+
+I still love We Were Promised Jetpacks and then a Counting Crows song came on and I thought, "oh 
+you..." and then i listened to it and then i realized that there is always room for these effusive
+songwriters like Dashboard Confessional and now, who, Mumford and Sons? What are they really doing?
+Playing the game. And then 15 minutes later I realize I'm still listening to Counting Crows.
+
+Oh, and yeah, so a lot of the stuff I've been listening to relies heavily on rich reverbs
+and echo (braids, givers, seryn, tree ring) so that's sort of the sound now. And then some old pearl
+jam or this counting crows stuff comes up which relies heavily on multitap delays. Was multitap
+delay sort of the sound of the late 90's? I know I was using the hell out of it (even though I had
+no idea what I was doing and it sounded like crap)
+
+Friday the sys admins were losing their shit. Today it is the developers on a project who are doing
+a live demo. So glad it isn't me.
+
+#### 2013 02 10
+
+Google API's are a tease. I know they can do what I want them to do but google imposes artificial
+limits that stop me just before I get a solution. I can't blame them, of course.
+
+"Foodfight" is a terrible movie I want to see: <http://www.youtube.com/watch?v=uROQ9nplxIY>
+
+**Move along, nothing to see here:** If you can give 
+society what it wants you have a higher likelihood of being "successful." If
+you can, move forward using a process of productive adaptation (assuming you can observe the 
+landscape as you trudge through it and all of its inevitable setbacks) in an effort to "evolve"
+your process in cooperation with the general path of the system's nature. Don't let your self
+interests be in conflict with the system because you won't succeed. Nature is testing you and it is
+not sympathetic. You need to step back and design a machine of the right people doing the right
+things. Constantly assess and improve that machine by objectively comparing outcomes with goals. If the 
+outcomes are inconsistent with your goals, modify the machine. Include yourself as part of the
+machine and place yourself in the correct role. If you aren't good at that particular role, be
+sure to fire yourself. Again, the most important requirement is you are objective and logical at
+all times. **done**
+
+Download with curl and immediately untar: curl http://site/someFile.tar.gz | tar xvz
+
+I did that to install elastisearch. ./bin/elasticsearch to start it up. it is running on port 9200 Then
+I wrote an app to index a ton of json. hit http://localhost:9200/cases/case/_search
+
+Then I installed elasticsearch-head using these instructions <https://github.com/mobz/elasticsearch-head>
+use it by hitting http://localhost:9200/_plugin/head/
+
+Elasticsearch might replace solr in our environment. However, i think elasticsearch's documentation
+is frikin' awful.
+
 #### 2013 02 08
 
 <http://en.wikipedia.org/wiki/Saudade>
