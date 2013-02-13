@@ -1,5 +1,24 @@
 ### Today I Learned
 
+#### 2013 02 12
+
+I have no problem with The Show is the Rainbow.
+
+Little else going on today. This FDA BS is getting me down. But, band practice is in a bit so that'll
+make it all better.
+
+She walked slowly though her gait was one of a barback moving quickly. I'd describe it as some 
+sort of reverse moonwalk in high heels.
+
+Practice was better this week. I was more with it than last week. The two new songs are coming along 
+nicely. Best joke of the night was Frank Ocean was simply channeling the spirit of Wesley Willis.
+
+Speaking of jokes, here's a doozie I made up while brushing my teeth, "Of course i'm jealous of
+her ex's. They can dodge bullets." This, my friends, is why I'm considered a comedy genius\*
+
+\* - not true.
+
+
 #### 2013 02 11
 
 Frank Ocean is a little rough around the edges when it comes to Grammy performances. I should have
@@ -16,8 +35,10 @@ jam or this counting crows stuff comes up which relies heavily on multitap delay
 delay sort of the sound of the late 90's? I know I was using the hell out of it (even though I had
 no idea what I was doing and it sounded like crap)
 
-Friday the sys admins were losing their shit. Today it is the developers on a project who are doing
-a live demo. So glad it isn't me.
+Friday the sys admins were losing their shit. Today it is the developers who are doing a live demo in
+ten minutes. I'm glad it isn't me.
+
+
 
 #### 2013 02 10
 
