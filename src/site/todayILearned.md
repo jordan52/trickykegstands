@@ -1,5 +1,18 @@
 ### Today I Learned
 
+#### 2013 02 13
+
+Before this morning the only Deer Tick I've heard is off Divine Providence (they're latest album.) 
+Hearing some things off War Elephant is a surprise. They're folk-alt-country? I had no idea. I'm 
+sure the recent change to their sound was a deliberate move, but I like to think that through the 
+years they've been accidentally writing these one-off songs that didn't at all fit with their sound. 
+Then one day they were like, "let's record all these fuckers and put them on one album."
+
+Last night in the State of the Union address Obama said, "Today, our scientists are mapping the human 
+brain to unlock the answers to Alzheimer’s." I work on the platform that handles imaging data for the 
+Human Connectome Project and all that FDA stuff I bitch about is for a new class of Alzheimer's drug. 
+Our lab is managing the brain imaging data. Fun!
+
 #### 2013 02 12
 
 I have no problem with The Show is the Rainbow.
@@ -7,14 +20,15 @@ I have no problem with The Show is the Rainbow.
 Little else going on today. This FDA BS is getting me down. But, band practice is in a bit so that'll
 make it all better.
 
-She walked slowly though her gait was one of a barback moving quickly. I'd describe it as some 
-sort of reverse moonwalk in high heels.
+She walked slowly though her gait was one of a barback sliding quickly through the crowd with buckets of
+ice. It'd be best described as some sort of reverse moonwalk in high heels.
 
 Practice was better this week. I was more with it than last week. The two new songs are coming along 
-nicely. Best joke of the night was Frank Ocean was simply channeling the spirit of Wesley Willis.
+nicely. Best joke of the night was Frank Ocean was simply channeling the spirit of Wesley Willis Sunday
+night at the Grammy's.
 
 Speaking of jokes, here's a doozie I made up while brushing my teeth, "Of course i'm jealous of
-her ex's. They can dodge bullets." This, my friends, is why I'm considered a comedy genius\*
+her ex's. They can dodge bullets." This, my friends, is why I'm often confused for a comedy genius.\*
 
 \* - not true.
 
