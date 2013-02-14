@@ -1,5 +1,30 @@
 ### Today I Learned
 
+#### 2013 02 14
+
+Pandas (python lib, not the bear) explained in ten minutes <http://vimeo.com/59324550>
+
+If you're sad that wasn't a link to a baby panda video, here is a bucket of sloths <http://vimeo.com/59234110>	
+
+In my spare time I've been working on sort of a thought experiment where I'm trying to figure out a 
+few paths to get $1.5M. Or, rather, what exactly does it take to create that much value. Take t-shirt 
+sales, for example. (I'm completely making these numbers up, i'm sure they're very naive) Say you make 
+$1.30 profit on each shirt sold. Assuming a 30% tax rate, you'd have to sell 1.5 million shirts. How 
+can you sell that many shirts? A combination of marketing and luck no doubt, but what about manufacturing 
+and distribution? What kind of support would you need (server capacity, call center, physical warehouse, 
+employees) What kind of pains are bound to happen at that sort of scale?
+
+Sure, it is silly but it is making me think way outside my comfort zone. That's gotta be good, right?. 
+In the future I'm going to apply that sort of framework to the ideas I think of or get pitched. A sad 
+part of it is applying it to most of my ideas leads to the whole, "You'll make more money opening a 
+couple of Dunkin' Donuts and it will be way easier." conclusion.
+
+Maybe I'll call it "The Dunkin' Donuts Test"(tm). Assuming I wrote a book, could that generate 1.5M
+in value? How long would it take to write the book? Market it? What are the risks involved looking objectively
+at existing book sales, publishing figures and the number of starving authors out there? Conclusion?
+It would be better and eaiser to open a Dunkin' Donuts...
+
+
 #### 2013 02 13
 
 Before this morning the only Deer Tick I've heard is off Divine Providence (they're latest album.) 
