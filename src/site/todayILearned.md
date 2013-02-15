@@ -1,37 +1,62 @@
 ### Today I Learned
 
+#### 2013 02 15
+
+If your csv file starts with the string, "ID," Excel thinks it should be a SYLK file and barfs a bunch of warning 
+dialogs <http://support.microsoft.com/kb/323626>
+
+I'm setting aside my hatred for funk and fusion so I can learn about [The Meters](http://en.wikipedia.org/wiki/The_Meters) 
+today. They're a 70's funk band from New Orleans. I get it, I think. There was a 5 minute bass solo which included
+a minute of wha wha and a few moments where he ignored the rest of the band (it is a polyrhythm! applaud goddammit!)
+
 #### 2013 02 14
 
-Pandas (python lib, not the bear) explained in ten minutes <http://vimeo.com/59324550>
+Pandas explained in ten minutes <http://vimeo.com/59324550>
 
-If you're sad that wasn't a link to a baby panda video, here is a bucket of sloths <http://vimeo.com/59234110>	
+If you're sad that wasn't a video of baby pandas, here is a bucket of sloths <http://vimeo.com/59234110>	
 
-In my spare time I've been working on sort of a thought experiment where I'm trying to figure out a 
-few paths to get $1.5M. Or, rather, what exactly does it take to create that much value. Take t-shirt 
-sales, for example. (I'm completely making these numbers up, i'm sure they're very naive) Say you make 
-$1.30 profit on each shirt sold. Assuming a 30% tax rate, you'd have to sell 1.5 million shirts. How 
-can you sell that many shirts? A combination of marketing and luck no doubt, but what about manufacturing 
-and distribution? What kind of support would you need (server capacity, call center, physical warehouse, 
-employees) What kind of pains are bound to happen at that sort of scale?
+I've been working on a thought experiment where I derive paths to get $1.5M\*. Or, rather, what 
+exactly does it take to create $1.5M in value. Take t-shirt sales, for example. 
+(I'm making these numbers up. I'm sure they're naive. Try not to get hung up on them.) Say you make 
+$1.30 profit on each shirt sold. Assuming a 30% tax rate, you'd have to sell 1.5 million shirts. 
+How can you sell that many shirts? It will take herculean combination of marketing and luck no doubt, 
+but what about manufacturing and distribution? What kind of support would you need (server capacity, 
+call center, physical warehouse, employees) What kind of pains are bound to happen at that sort of 
+scale? What are your quantifiable risks?
 
-Sure, it is silly but it is making me think way outside my comfort zone. That's gotta be good, right?. 
+Sure, it is silly but it takes me way outside my comfort zone. That has got to be good, right?. 
 In the future I'm going to apply that sort of framework to the ideas I think of or get pitched. A sad 
-part of it is applying it to most of my ideas leads to the whole, "You'll make more money opening a 
-couple of Dunkin' Donuts and it will be way easier." conclusion.
+part of it is applying it to most of my ideas lead to the whole, "You'll make more money opening a 
+couple of Dunkin' Donuts and it will be way easier." conclusion. **I call it "The Dunkin' Donuts Test" &#174;** 
 
-Maybe I'll call it "The Dunkin' Donuts Test"(tm). Assuming I wrote a book, could that generate 1.5M
-in value? How long would it take to write the book? Market it? What are the risks involved looking objectively
-at existing book sales, publishing figures and the number of starving authors out there? Conclusion?
-It would be better and eaiser to open a Dunkin' Donuts...
+Maybe I should write a self-help how to book based on the Dunkin' Donuts Test. Could that book net me 
+$1.5M? How long would it take to write the book? What does it take to market a $1.5M book? What are the risks 
+involved? Take an objective look at existing book sales, publishing figures and the number of starving 
+authors out there... What's the back of the envelope conclusion? It would be eaiser and less risky to open 
+a few Dunkin' Donuts...
 
+And why Dunkin' Donuts? My grandfather was a baker so it is in my blood. Sadly, I can't bake so I'd need
+sort of a turnkey franchise to set everything up and I'd need to hire people who can deal with mixers and
+whatever it takes to make food. **done**
+
+The first thread on this HN post <http://news.ycombinator.com/item?id=3816350> which is about Gabe's argument
+for a single co-founder is a nice conversation about diversifying with several, small, monthly income type
+projects.
+
+The Show is the Rainbow is now [Touch People](https://soundcloud.com/touch_people) and apparently he is a 
+big gamer.
+
+\* - this is what I consider the lowest rung of f-you money. Enough to retire on some rocky land in the
+Ozarks and not do anything except maybe learn to hunt.
 
 #### 2013 02 13
 
-Before this morning the only Deer Tick I've heard is off Divine Providence (they're latest album.) 
-Hearing some things off War Elephant is a surprise. They're folk-alt-country? I had no idea. I'm 
+Before this morning the only [Deer Tick](http://en.wikipedia.org/wiki/Deer_Tick_(band)) I've heard is off 
+Divine Providence (they're latest album.) 
+Hearing some things off [War Elephant](http://en.wikipedia.org/wiki/War_Elephant_(album)) is a surprise. They're folk-alt-country? I had no idea. I'm 
 sure the recent change to their sound was a deliberate move, but I like to think that through the 
 years they've been accidentally writing these one-off songs that didn't at all fit with their sound. 
-Then one day they were like, "let's record all these fuckers and put them on one album."
+Then one day they were like, "let's finally record all these fuckers and put them on one album."
 
 Last night in the State of the Union address Obama said, "Today, our scientists are mapping the human 
 brain to unlock the answers to Alzheimer’s." I work on the platform that handles imaging data for the 
@@ -40,13 +65,13 @@ Our lab is managing the brain imaging data. Fun!
 
 #### 2013 02 12
 
-I have no problem with The Show is the Rainbow.
+I have no problem with [The Show is the Rainbow](http://en.wikipedia.org/wiki/The_Show_is_the_Rainbow).
 
 Little else going on today. This FDA BS is getting me down. But, band practice is in a bit so that'll
 make it all better.
 
 She walked slowly though her gait was one of a barback sliding quickly through the crowd with buckets of
-ice. It'd be best described as some sort of reverse moonwalk in high heels.
+ice. Her walk is best described as some sort of reverse moonwalk in high heels.
 
 Practice was better this week. I was more with it than last week. The two new songs are coming along 
 nicely. Best joke of the night was Frank Ocean was simply channeling the spirit of Wesley Willis Sunday
@@ -101,14 +126,13 @@ all times. **done**
 
 Download with curl and immediately untar: curl http://site/someFile.tar.gz | tar xvz
 
-I did that to install elastisearch. ./bin/elasticsearch to start it up. it is running on port 9200 Then
-I wrote an app to index a ton of json. hit http://localhost:9200/cases/case/_search
-
-Then I installed elasticsearch-head using these instructions <https://github.com/mobz/elasticsearch-head>
-use it by hitting http://localhost:9200/_plugin/head/
+I used that trick to install elastisearch today. (these really are just my notes so I don't forget.) 
+./bin/elasticsearch to start it up. It is running on port 9200. Then I wrote an app to index a ton of 
+json. hit http://localhost:9200/cases/case/_search Then I installed elasticsearch-head using these 
+instructions <https://github.com/mobz/elasticsearch-head> use it by hitting http://localhost:9200/_plugin/head/
 
 Elasticsearch might replace solr in our environment. However, i think elasticsearch's documentation
-is frikin' awful.
+is god awful.
 
 #### 2013 02 08
 

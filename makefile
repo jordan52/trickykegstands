@@ -20,13 +20,15 @@ HTMLS= $(patsubst $(MDDIR)/%.md,$(OUTDIR)/%.html,$(wildcard $(MDDIR)/*.md))
 
 all : $(HTMLS) resources
 
+til : $(HTMLS) resources deploytil
+
 resources :
 	rsync -a $(RESOURCES)/* $(OUTDIR)/.
 
 deploy :
 	s3cmd sync --acl-public $(OUTDIR)/. s3://$(S3BUCKET)/
 
-til :
+deploytil :
 	s3cmd sync --acl-public $(OUTDIR)/todayILearned.html s3://trickykegstands.com/
 
 # This generic rule accepts HTML targets with corresponding Markdown 
