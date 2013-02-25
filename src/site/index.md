@@ -1,5 +1,5 @@
-[Here's a lazy attempt at a blog.](someThoughts.html)
-[And, another.](todayILearned.html)
+
+Woah, as of today I've been consistently blogging for two weeks! [Check it.](todayILearned.html)
 
 ### This is Why Owls Freak Me Out
 

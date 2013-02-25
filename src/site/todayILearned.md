@@ -1,14 +1,144 @@
 ### Today I Learned
 
-For the most part, each paragraph is something I wrote down at some point throughout the day. If the idea goes on for longer than a paragraph I might title that section and end it with a **done**. Or, not. Who knows.
+#### 2013 02 24
+
+[monsters](http://armp.it/#monsters) - a work in progress.
+
+IF you are using Hibernate and JPA and have cascade set in your relationships, you HAVE to put the cascade
+type in the @OneToMany annotation for JPA to see it. If you only set it in the hibernate @Cascade it will probably 
+not see it and you will have bugs. I'm saying, do it like this:
+
+@OneToMany(fetch = FetchType.EAGER, targetEntity = Role.class, cascade={CascadeType.MERGE})
+
+and forgo the extra @Cascade annotation if you don't need it.
+
+I noticed the problem when JPA was essentially trying to a cascade.ALL even though I had an annotation telling it to
+only MERGE.  I removed the hibernate annotation and added the cascade option to the JPA annotation and everything
+started to work. The more you know...
+
+Something something oral history something something.
+
+Say you put your task scheduler in your applicationContext.xml. Say you also reference that file twice in your web.xml
+once for the context, once for the dispatcher servlet. Well then, your scheduled tasks are going to run twice. So, don't do that.
+I created an applicationContext-tasks.xml and put the tasks there and passed it to my contextconfiglocation. that fixed the
+double tap.
+
+#### 2013 02 23
+
+When I have a key->value Map, i often want to serialize it to json. Doing that gives:
+
+{"key1":"value1","key2":"value2"}
+
+Say I want to turn that into a select box. how do you do it? Here's how I did it:
+
+~~~~~~
+		$.getJSON("/path/to/json", function(result) {
+		  var options = $("#options") //the id of the select box to which we'll append;
+		  for (var key in result) {
+		    if (result.hasOwnProperty(key)) {
+		      options.append($("<option />").val(result[key]).text(key));
+		    }
+		  }	
+		});
+~~~~~~
+
+but I thought I could do better so I did:
+
+~~~~~~
+     	$.getJSON("/path/to/json", function(result) {
+ 	    	var options = $("#options"); 	
+ 	    	$.each(result, function(key, value) {
+ 	    		options.append($("<option />").val(value).text(key));
+ 	    	});
+~~~~~~
+
+But then they list was unordered, so I added some sorting:
+
+~~~~~~
+    	$.getJSON("/path/to/json", function(result) {
+	    	var options = $("#options"); 	
+	    	var keys=[];
+	    	$.each(result, function(key, value) {
+	    		keys.push(key);
+	    	});
+	    	keys.sort();
+	    	$.each(keys, function(index, key){
+	    		options.append($("<option />").val(result[key]).text(key));
+    		});
+    	});
+~~~~~~
+
+Op-Shop is another term for thrift shop.
+
+#### 2013 02 22
+
+Zookeeper + elastic search with the zookeeper plugin that turns off _Zen Discovery_. Remember, zookeeper can keep track and manage SOLR instances, as well.
+
+I love the idea of making an open source, boilerplate kind of spring app that has all the features I think are necessary/useful for an MVP, but actually doing it is tedious!
+
+Some pomodoro notes - <http://en.wikipedia.org/wiki/Pomodoro_technique_software> <http://nodetimer.com/>
+
+I can get free access to ValueLine and Morningstar through the St. Louis County library. wow. <http://www.slcl.org/research/databases-a-z/v>, <http://www.slcl.org/research/databases-a-z/m>
+
+#### 2013 02 21
+
+Worthless trivia - [Peacock Alley](http://en.wikipedia.org/wiki/Peacock_Alley_(jazz_club)) and Club Riviera were the hot spots when my 70 year old friend was cavorting with the glitterati around St. Louis in the 1950's.
+
+I would like to read this and implement it soon - <http://centripetal.ca/blog/2011/02/07/getting-started-with-selenium-and-jenkins/>.
+
+There is a robot on another planet drilling holes into rocks right now. Humans effectively have a mine on another planet. Baby steps, of course.
+
+[The Antics Roadshow](http://www.youtube.com/watch?v=SA27ffal7Yk) is a fun show that might have been created by Banksy.
+
+#### 2013 02 20
+
+Remember the Pepsi Chill-Out?
+
+I learned about [Haim](http://en.wikipedia.org/wiki/Haim_(band)) today from audioindie: <https://www.youtube.com/watch?v=0ovrplcNwXo>
+
+I'm pleased with my Warby Parker experience. I bought the Crane frames in Sugar Maple. On one hand they feel like inexpensive frames. On the other hand, they're nice looking, you can't beat the price, I got them in less than a week, and I can see. The only downside is I'll have to adjust them myself so they fit my face. I wonder what people who do not have a heat gun do.
+
+My app had a log4j.properties file in the classpath which had environment specific stuff hard coded into it (and therefore committed to mecurial.) Remember back when I pulled all the passwords and environment specific config out of the config files that lived in the webapp? I couldn't figure out how to do a similar thing with log4j.properties. So, I left it in my classpath (the WAR file.) Today I realized I can tell web.xml to look in /etc/\<appname\>/log4j.properties for the file. Yes, that path is hard coded, but, the /etc/\<appname\>/\<appname\>.properties file is also hard coded in applicationContext.xml. I feel relatively comfortable having just those two places that call out a directory that _has_ to exist before the app can start up. At this point, I can't think of any place in my app that has things that shouldn't be hard-coded in the source, database, or in some arbitrary place. Everything is in /etc/\<appname\>/*. Feels good, man. Added bonus is I can set up my graylog2 logger with appropriate originHost based on the machine that is running. That means I can filter by machine. Now I'll be able to easily tell what's coming from development, test, production, etc. 
+
+NEATWHEELIES.COM IS AVAILABLE!!! If only I had a reason to buy it.
+
+
+#### 2013 02 19
+
+Three more reasons for using markdown instead of Word: grep, xargs and sed.
+
+#### 2013 02 18
+
+[Sand Mandala](http://en.wikipedia.org/wiki/Sand_mandala) & [Sisyphean](http://en.wikipedia.org/wiki/Sisyphus) - I'm writing a book/short story about a young man who spends the majority of the time re-building the runway at his family's old farm. He steals airplanes and grows a little and eventually crashes and the runway turns back into an overgrown field. If everything goes to plan, the book or story should be finished sometime around 2022.
+
+Are reposts (re: reddit) simply A-B tests for content? Or, maybe training sets for click maximization algorithms? Even [_I Can Haz Cheezburger_ admits that data is the most important thing to drive business](http://venturebeat.com/2012/08/23/screw-design-and-get-data-says-ben-huh-of-i-can-has-cheezburger/) - There is no way they only use algorithms to lay out their pages. Why wouldn't they do some crazy optimization for content to drag people in as deep and for as long as possible. In fact, that's the only thing they should be optimizing for assuming that is what drives their revenue.
+
+#### 2013 02 17
+
+drained.
+
+**ok, weird moment**
+
+I have awesome, vivid dreams and I love coincidences. I know you're not supposed to talk/write about dreams because no one cares and it makes you sound like a nut, but this is all I've got today.
+
+I took a break from working to read ["A Look Back" article about 1940's gang violence in stl](http://www.stltoday.com/news/local/metro/look-back/a-look-back-former-boss-of-notorious-egan-s-rats/article_25148622-6c7e-50af-8e46-d77fdea349af.html). I mapped a couple of the addresses including the one mentioned here: "The Rats’ hangout was the Maxwelton Club, on St. Charles Rock Road at Pennsylvania Avenue." There's nothing much there anymore except a few cemeteries (and a children's psychiatric hospital? sad!)  
+
+An hour later a FB friend posted photos of a mausoleum she was in (it was very cool!) someone asked her where it was and she said it was at Valhalla on St. Charles Rock Road... I was like, wow, that's weird, i was just looking at a cemetary on a map, i wonder if it is the same one. I found Valhalla's website and yep, it is very close to where the Maxwelton Club used to be. Then I scrolled down and saw the Valhalla building. Sho 'nuff, I was in and around building that _looked exactly like that_ in a dream a few months ago. I was being chased and it wasn't cool but I stumbled on this very cool looking mausoleum and kind of hid there for a while.
+
+Fun coincidences! I really want to drive up there to see if I get chased.
+
+**done**
+
 
 #### 2013 02 16
 
-I finally shut down an EC2 instance that was always on and underutilized. Look at me, being all frugal and whatnot.
+I finally shut down my underutilized-but-always-on EC2 instance. Look at me, being all frugal and whatnot.
 
 Regarding "What'd I Say" on the 2004 soundtrack for "Ray!" I love how the instrumentation slowly falls into place rhythm-wise. The band is like, "Whatever... We'll hit a couple things here and there until he gets a groove going." They get it together just in time for Ray Charles to miss the mic when the words start. The whole intro is somehow both wrecked and perfect. "Roller, baby..." I can't find much information on this particular recording. IMDB says it is courtesy of Atlantic Records but it says nothing about where or when it was recorded. I'd link to the song but I can't find one for you.
 
 Wait for a sunny day and find a kitchen who's sink is under a nicely lit window. Thaw frozen blueberries in a stainless steel bowl. Eat the blueberries but leave the juice. Rinse that bowl under a stream of water and watch closely. Wait for the instant where the purple juice turns blue. That's my favorite color. A white bowl works, too. But, it has to be stainless steel to be my favorite.
+
+Holy shit, my continuous integration process is amazing. I committed a change set to github. My Jenkins server immediately started building the project. When the build finished Jenkins deployed the war to my test tomcat instance. The webapp restarted and my changes are live. I'm checking my static code analysis results and smiling like Whitney Houston. I have no idea what that means...
 
 #### 2013 02 15
 
@@ -58,7 +188,7 @@ And why Dunkin' Donuts? My grandfather was a baker so it is in my blood. Sadly, 
 
 The first thread on this HN post <http://news.ycombinator.com/item?id=3816350> (which is about Gabe's argument for a single co-founder) is a nice conversation about diversifying with several, small, monthly income type projects.
 
-The Show is the Rainbow is now [Touch People](https://soundcloud.com/touch_people) and after checking his twitter feed it seems like he is a big gamer.
+The Show is the Rainbow is now [Touch People](https://soundcloud.com/touch_people) and after checking his twitter feed it seems like he is a big gamer. Cool story, brah.
 
 \* - this is what I consider the lowest rung of f-you money. Enough to retire on some rocky land in the Ozarks and not do anything except maybe learn to hunt.
 
@@ -239,3 +369,7 @@ We move faster if, for anything, to spend less time in it.
 #### 2012 05 05
 
 <http://en.wikipedia.org/wiki/Chingon_(band)>
+
+
+[**Here is my last attempt at blogging consistently**](someThoughts.html)
+
