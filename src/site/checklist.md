@@ -92,7 +92,12 @@
 cd /Users/jordanOriginal/Dropbox
 pandoc -s -S --toc -H checklist.css checklist.txt -o checklist.html
 
-*update* - I added this to trickykegstands so 1) it is public. 2) i don't have to do the above command 3) I don't have to worry about being out of sync or losing any changes when working on it in multiple places. 
+*update*
+
+I added this to trickykegstands so 
+1) it is public. 
+2) i don't have to do the above command 
+3) I don't have to worry about being out of sync or losing any changes when working on it in multiple places. 
 
 ~~~~
 
@@ -711,6 +716,7 @@ pg_dump -c <db_name> > backupFile.bak
 
 ##Using pandoc
 * Install it... dmg package, or available in distros apt-get, etc.
+* if you are using a mac and plan to use latex or tex or generate a PDF, go [here](http://www.tug.org/mactex/morepackages.html) and download basictex. install it. open a command line and run sudo tlmgr update --self then run sudo tlmgr install dvipng (that's more for getting anki2 to run properly!) then you'll be all set for generating pdfs.
 * Make a file, then run pandoc -s FILENAME -o file.html
 
 ##Using pandoc to convert trickykegstands to markdown then markdown to a finished site (full circle)
@@ -859,12 +865,13 @@ org.codehaus.cargo:cargo-maven2-plugin:redeploy in my pom.
 * <http://apple.stackexchange.com/questions/15695/how-can-i-get-latex-working-on-anki>
 * download basictex <http://www.tug.org/mactex/morepackages.html>
 * sudo tlmgr update --self
+* sudo tlmgr install dvipng
+* bonus is you now have basictex on your machine so you can write latex docs
 
 ##Quotes
 * as soon as you're in the smartest person in the room, go to another room.
 * if there isn't anyone in the room who's weird or terrible, it's probably you.
-* the moment your head hits your pillow, time is yours and there is nothing you can do that will affect 
-anything in the outside world. You might as well enjoy it and get some rest.
+* the moment your head hits your pillow, time is yours and there is nothing you can do that will affect  anything in the outside world. You might as well enjoy it and get some rest.
 
 
 
@@ -893,8 +900,9 @@ Firstarter (flint/steel)                                  $10
 
 Bug out bag                                              $500
 
-red turtleneck, button down (pink or blue, with some      $50
-sort of texture), dark blue pants, awesome shoes.
+red turtleneck, button down shirt (pink or blue,          $50
+with some sort of texture), dark blue pants, 
+awesome shoes.
 
 -------------------------------------------------------------
 

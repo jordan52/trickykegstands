@@ -1,8 +1,59 @@
 ### Today I Learned
 
+#### 2013 02 27
+
+Talking to a friend a while back about Saves the Day and he was like, "I never could get that into them because they always sounded so much like Lifetime." I was like, "who's lifetime" and he said, "Check out New Jersey's Best Dancers and you'll understand." Holy shit, he wasn't kidding.
+
+While we're talking about that, I wonder if Ozma is pissed at Weezer for ruining everything.
+
+Markdown + Pandocs + Latex = writing awesome looking documents. I'm digging into it, now. Also, looking into generating presentations with Markdown + Pandocs + Latex + Beamer.
+
+#### 2013 02 26
+
+The trouble with having a difficult to spell last name - <http://www.bizjournals.com/stlouis/blog/BizNext/2013/02/st-louis-startup-juristat-wants-to.html>
+
+I would read anything titled, "I was an Encyclopedia Brown Ghost Writer."
+
+This retina based macbook with the scaling turned all the way up (so everything is tiny) is wonderful. So much room for activities!
+
+if you want to use pandocs to generate pdf on os x you have to install basictex and then run sudo tlmgr update --self 
+
+if you want to make a latex resume, use this guy's template and call it a day - <http://www.toofishes.net/blog/why-i-do-my-resume-latex/>
+
+#### 2013 02 25
+
+I received a 13" macbook retina and spent a few hours setting it up. I should have been updating this with details on how to deal with things like eclipse/tomcat integration (install the j2ee bundle, then install the wtp m2e thing necessary to hook the maven project up to the server in the server list) but, I didn't. I do still have the list of software i installed:
+
+* XCode - enable the command line tools through preferences to get make
+* VirtualBox
+* Oracle jdk
+* chrome
+* postgresql pgadminIII
+* mecurial
+* git
+* pandoc
+* s3cmd
+* R 2.15.2
+* RStudio
+* Dropbox
+* SourceTree
+* Firefox
+* HipChat
+* anki2
+* tomcat6 installed at /Library/Tomcat (symbolic link to /usr/local/share/apache-tomcat...
+* eclipse jee juno
+
+The most annoying thing was getting eclipse working properly with maven and  tomcat. I think I got everything working after an hour of fiddling. One Good Thing is I found some bugs in juristat that cropped up when trying to build it in this clean environment. While writing this I realize I have to rebuild the spelling dictionary for this machine. I'm sure there will be weeks of finding little things missing here and there.
+
+The thing I fear the most is working in a non-case-sensitive partition. WTF Apple?!? When I bought my last mac I immediately installed a bigger, faster hard drive. I formatted it as case-sensitive. I'm going to try to leave this machine as-is from the factory. I have a feeling I'll have to bring up an ubuntu VM  and do a lot of work, there. Well, a lot of testing, at least. I'm glad I have the continuous integration server working.
+
+One part I'm happy about is this machine is going with me everywhere. I was EXTREMELY paranoid taking my other machine with me because it contained things like my budget, taxes, all my photos, scans, paperwork, and I'm sure plenty of other stuff I'd rather not be in someone else's hands. This machine is strictly going to be for work. I don't even plan to log into facebook with it. The SSD is only 256GB so it can't hold my music and pictures, anyway. Everything on this machine is in a central repo. If the machine disappears, I'll be able to recover quickly. Good thing, because I just noticed this does not have a slot for a Kensington lock. WTF Apple?!?
+
+Things I still am on the fence about installing. Do I need an elasticsearch instance on this box? It would be nice. A full rails environment will wind up on a VM. A local SOLR would be nice, but... meh. I think the most important thing is to decide which music I want on this machine. So much to do!
+
 #### 2013 02 24
 
-[monsters](http://armp.it/#monsters) - a work in progress.
+[monsters](http://armp.it/#monsters) - a work in progress. So emo!
 
 IF you are using Hibernate and JPA and have cascade set in your relationships, you HAVE to put the cascade
 type in the @OneToMany annotation for JPA to see it. If you only set it in the hibernate @Cascade it will probably 
@@ -121,7 +172,7 @@ drained.
 
 I have awesome, vivid dreams and I love coincidences. I know you're not supposed to talk/write about dreams because no one cares and it makes you sound like a nut, but this is all I've got today.
 
-I took a break from working to read ["A Look Back" article about 1940's gang violence in stl](http://www.stltoday.com/news/local/metro/look-back/a-look-back-former-boss-of-notorious-egan-s-rats/article_25148622-6c7e-50af-8e46-d77fdea349af.html). I mapped a couple of the addresses including the one mentioned here: "The Rats’ hangout was the Maxwelton Club, on St. Charles Rock Road at Pennsylvania Avenue." There's nothing much there anymore except a few cemeteries (and a children's psychiatric hospital? sad!)  
+I took a break from working to read ["A Look Back" article about 1940's gang violence in stl](http://www.stltoday.com/news/local/metro/look-back/a-look-back-former-boss-of-notorious-egan-s-rats/article_25148622-6c7e-50af-8e46-d77fdea349af.html). I mapped a couple of the addresses including the one mentioned here: "The Rats��� hangout was the Maxwelton Club, on St. Charles Rock Road at Pennsylvania Avenue." There's nothing much there anymore except a few cemeteries (and a children's psychiatric hospital? sad!)  
 
 An hour later a FB friend posted photos of a mausoleum she was in (it was very cool!) someone asked her where it was and she said it was at Valhalla on St. Charles Rock Road... I was like, wow, that's weird, i was just looking at a cemetary on a map, i wonder if it is the same one. I found Valhalla's website and yep, it is very close to where the Maxwelton Club used to be. Then I scrolled down and saw the Valhalla building. Sho 'nuff, I was in and around building that _looked exactly like that_ in a dream a few months ago. I was being chased and it wasn't cool but I stumbled on this very cool looking mausoleum and kind of hid there for a while.
 
@@ -196,7 +247,7 @@ The Show is the Rainbow is now [Touch People](https://soundcloud.com/touch_peopl
 
 Before this morning the only [Deer Tick](http://en.wikipedia.org/wiki/Deer_Tick_(band)) I've heard is off Divine Providence (they're latest album.) Hearing some things off [War Elephant](http://en.wikipedia.org/wiki/War_Elephant_(album)) is a surprise. They're folk-alt-country? I had no idea. I'm sure the recent change to their sound was a deliberate move, but I like to think that through the years they've been accidentally writing these one-off songs that didn't at all fit with their sound. Then one day they were like, "let's finally record all these fuckers and put them on one album."
 
-Last night in the State of the Union address Obama said, "Today, our scientists are mapping the human brain to unlock the answers to Alzheimer’s." I work on the platform that handles imaging data for the Human Connectome Project and all that FDA stuff I bitch about is for a new class of Alzheimer's drug. Our lab is managing the brain imaging data. Fun!
+Last night in the State of the Union address Obama said, "Today, our scientists are mapping the human brain to unlock the answers to Alzheimer���s." I work on the platform that handles imaging data for the Human Connectome Project and all that FDA stuff I bitch about is for a new class of Alzheimer's drug. Our lab is managing the brain imaging data. Fun!
 
 #### 2013 02 12
 
@@ -360,7 +411,7 @@ A moment that, for me, is both terrifying and confusing.
 
 #### 2012 12 18
 
-lee /lē/ Shelter from wind or weather given by a neighboring object, especially nearby land. 2. The sheltered side; the side away from the wind.
+lee /l��/ Shelter from wind or weather given by a neighboring object, especially nearby land. 2. The sheltered side; the side away from the wind.
 
 #### 2012 12 17
 

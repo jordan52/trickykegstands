@@ -22,6 +22,8 @@ all : $(HTMLS) resources
 
 til : $(HTMLS) resources deploytil
 
+check : $(HTMLS) resources deploycheck
+
 resources :
 	rsync -a $(RESOURCES)/* $(OUTDIR)/.
 
@@ -30,6 +32,10 @@ deploy :
 
 deploytil :
 	s3cmd sync --acl-public $(OUTDIR)/todayILearned.html s3://trickykegstands.com/
+
+deploycheck :
+	s3cmd sync --acl-public $(OUTDIR)/checklist.html s3://trickykegstands.com/
+
 
 # This generic rule accepts HTML targets with corresponding Markdown 
 # source, and makes them using pandoc
