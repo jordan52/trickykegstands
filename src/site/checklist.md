@@ -415,6 +415,7 @@ lets anyone on the 192.168.1.0 network connect with a password
 * sudo java -jar start.jar 2\>&1 \> /var/log/solr.out &  
 * **I NEED TO WRITE A STARTUP SCRIPT AND MONITOR IT WITH MONIT.**
 * Process 1597 when I started it 30 DEC 2012
+* http://thesorrypeople.com:8983/solr/admin/
 
 
 ##SSH Key How-To
