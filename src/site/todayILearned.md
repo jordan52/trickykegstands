@@ -1,9 +1,18 @@
 ### Today I Learned
 
+#### 2013 03 11
+
+This guy might be my new hero <http://en.wikipedia.org/wiki/Adam_McKay>
+
+#### 2013 03 10
+
+When you get an error in your eclipse project that says "a schema cannot contain two global components," have a look at the xml file that it is complaining about. I had "http://www.springframework.org/schema/data/jpa/spring-jpa.xsd" in my schema location property. It should have been "http://www.springframework.org/schema/data/jpa/spring-jpa-1.2.xsd" (Adding the version fixed the error.)
+
+Remind me to read this <http://blog.yhathq.com/posts/R-and-pandas-and-what-ive-learned-about-each.html>
 
 #### 2013 03 08
 
-The past 5 days included a lingering stomach virus, losing our 2 day a week babysitter, a dead battery, and a great band practice. In other words, I learned a whole lot. The most exciting part for me is I'm finally at my target weight. I haven't had any added sugar in 5 days mostly because any food-like item makes me want to ralph. BUT, last december's flu let me quit caffeine so I'm hoping this one will let me quit eating so much damn sugar. The babysitter situation is sad for everyone, but everything worked out. I got stranded with a dead car last night but a good friend came through and saved the night. This morning, another friend came through in the form of tools that let me run to the dealer to get a battery and install it. I read a ton of stories about how you had to have the computer reset if you changed the battery in my particular car. Apparently, you don't. A $200 is way better than a $200 batter, a tow to the shop (the shop that has the means to reset the computer), and labor. Oh, and I saved $262 at daycare because I'm a nice person who asked for a break. It's a great week, even though it isn't. I'm just glad I was able to eat something today. XOXO
+The past 5 days included a lingering stomach virus, losing our 2 day a week babysitter, a dead battery, and a great band practice. In other words, I learned a whole lot. The most exciting part for me is I'm finally at my target weight. I haven't had any added sugar in 5 days mostly because any food-like item makes me want to ralph. BUT, last december's flu let me quit caffeine so I'm hoping this one will let me quit eating so much damn sugar. The babysitter situation is sad for everyone, but everything worked out. I got stranded with a dead car last night but a good friend came through and saved the night. This morning, another friend came through in the form of tools that let me run to the dealer to get a battery and install it. I read a ton of stories about how you had to have the computer reset if you changed the battery in my particular car. Apparently, you don't. A $200 battery is way better than a $200 battery, a tow to the shop (a shop that has the means to reset the computer), and labor. Oh, and I saved $262 at daycare because I'm a nice person and I asked for it. It's a great week, even though it isn't. I'm just glad I was able to eat something today. XOXO
 
 #### 2013 03 03
 

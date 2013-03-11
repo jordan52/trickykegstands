@@ -546,6 +546,10 @@ hg id -i
 * do a word count inside eclipse
 file search, select the file, enable regex and search for \\w+
 
+* do a multiline (vertical) edit in eclipse.
+select a block of text by placing your cursor where you want the edit to start and dragging straight down, option/command/A then edit away
+remember option/command/A will throw you in block select mode. hit it again to turn it off.
+
 * global find replace using xargs and sed works on os x 
 find . -type f | xargs sed -i '' -e 's/juristat/boilerplate/g'
 
