@@ -7,7 +7,7 @@ Full stack software engineer with quantitative analysis, applied statistics, and
 Experience
 ========
 
-Cofounder
+Founder
 
 Datanalytics Inc.
 
@@ -16,6 +16,7 @@ February 2012 - Present
 * Cofounded a startup working to develop a web-based analytics product for litigators.
 * Applied Natural Language Processing algorithms and advanced statistical analysis to court case datasets.
 * Applied time series analysis and Monte Carlo simulations to determine probable outcomes.
+* Built the entire web front end.
 
 Technologies Used: Java, Hibernate, Spring, Javascript, JQuery, AJAX, Ruby, Python, PostgreSQL, Hadoop, HBase, ZooKeeper, R, Chef, Virtualization, Amazon Web Services
 
@@ -29,7 +30,10 @@ Washington University School of Medicine
 September 2011 - Present
 
 * Designed and implemented various projects to support neuroimaging and imaging informatics research.
+* Participated in a full lifecycle effort to bring the lab up to compliance to run regulated clinical trials.
+* Developed Software Development SOP's 
 * Aligned processes for FDA compliance including CFR Part 11 and GCP certification.
+* Validation team lead for FDA CFR Part 11 system validation effort.
 
 Technologies Used: Java, Hibernate, Spring, Python, Javascript, AJAX
 

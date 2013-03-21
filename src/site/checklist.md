@@ -339,6 +339,11 @@ static_media//mp3 to get rid of the double slashes. Do that by running grep -lr
 * Fix audioindie.com in route53 by pointing it to the s3 bucket
 * done
 
+##s3cmd with multiple accounts
+* cp ~/.s3cfg ~/.s3cfg-altAccount
+* open .s3cfg-altAccount and paste your key and passphrase from the new account.
+* s3cmd ls -c ~/.s3cfg=altAccount (lots of typing, yes.)
+
 ##Ssh Tunnels
 
 * Normal Tunnels:
@@ -873,12 +878,53 @@ org.codehaus.cargo:cargo-maven2-plugin:redeploy in my pom.
 * sudo tlmgr install dvipng
 * bonus is you now have basictex on your machine so you can write latex docs
 
+##Install tomcat on my mac
+
+* download it
+* unzip it to /usr/local/share
+* symlink it to /Library/Tomcat (I cannot 100% remember why i did that)
+
+##Install HBase on my mac
+
+* download it
+* unzip it to /usr/local/share
+* edit bash_profile to look like this:
+
+export CATALINA_HOME=/Library/Tomcat
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJD$
+export HBASE_HOME=/usr/local/share/hbase-0.92.2
+
+export PATH=$HBASE_HOME:$JAVA_HOME:$PATH
+
+* edit $HBASE_HOME/conf/hbase-env.sh file, update the JAVA_HOME
+
+export JAVA_HOME=$JAVA_HOME
+
+* cd $HBASE_HOME/bin
+* ./start-hbase.sh
+* ./hbase shell
+* ./stop-hbase.sh
+* [here](http://spawgi.wordpress.com/2012/12/03/basics-of-hbase/) is a handy guide for installing hbase as a pseudo-distributed environment.
+
+##Install hadoop on my mac
+
+* download it
+* unzip it to /usr/local/share
+* bin/hadoop to run some hadoop jobs.go [here](http://hadoop.apache.org/docs/stable/single_node_setup.html) for more
+
+#Import a seq file in hadoop
+./hbase org.apache.hadoop.hbase.mapreduce.Import case ~/Downloads/cases.seq -libjars /jordan/projects/code/api/target/API-0.0.1-SNAPSHOT.jar
+
+#enable applet debugging by connecting via socket
+
+* system preferences->other->java 
+* java button, "view" then add the -Xnoagent -Xdebug -Xrunjdwp:transpor... stuff to the "Runtime Parameters"
+* start the applet then connect using eclipse.
+
 ##Quotes
 * as soon as you're in the smartest person in the room, go to another room.
 * if there isn't anyone in the room who's weird or terrible, it's probably you.
 * the moment your head hits your pillow, time is yours and there is nothing you can do that will affect  anything in the outside world. You might as well enjoy it and get some rest.
-
-
 
 ##Wishlist
 
@@ -899,6 +945,8 @@ Fix up the covered porch and hot tub area             $10,000
 
 Get the 928 Running OK                                 $5,000
 
+A good office chair                                      $700
+
 lock picking tools                                       $100
 
 Firstarter (flint/steel)                                  $10
@@ -918,4 +966,7 @@ installation steps
 pre test setup
 test
 post test
+
+##appliances
+dishwasher model number is kuds30ixss1 - here's some parts online - [here](http://www.searspartsdirect.com/partsdirect/part-model/Kitchenaid-Parts/Dishwasher-Parts/Model-KUDS30IXSS1/0593/0130000/W1102063/00002?blt=06&prst=&shdMod=)
 
