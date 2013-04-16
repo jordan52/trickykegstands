@@ -365,6 +365,8 @@ machine at work.
 
 ##Enable JPDA on a Ubuntu tomcat6 service
 
+NOPE - the right place to do this is in /etc/default/tomcat6. don't mess with the init.d/tomcat6 script!
+
 * edit /etc/init.d/tomcat6 and add this to the beginning of the default 
 
 ~~~~
@@ -386,6 +388,9 @@ TOMCAT_SH="set -a; JAVA_HOME=\"$JAVA_HOME\"; source \"$DEFAULT\";
 JAVA_OPTS=\"$JAVA_OPTS\"; 
 CATALINA_HOME=\"$CATALINA_HOME\"; 
 ~~~~
+
+##WAIT##
+it looks like the proper place to put this would be in /etc/default/tomcat6.
 
 ##To get tomcat to use sun java 7 on my VM
 
