@@ -633,6 +633,9 @@ local tomcat.
 * back up haproxy by logging into the machine and rsync -avz /etc/haproxy/haproxy.cfg jordan@192.168.1.4:/mnt/data/haproxy\<YYYYMMDD\>.cfg
 
 ##Graylog2
+
+#### [Here are these instructions cleaned up:](graylog2setup.html)
+
 * install via cookbook... lots of mods to get it to work.
 * change passenger to use ruby 1.9.3 using the guide here <http://wiki.brightbox.co.uk/docs:ruby-ng> lots of apt-get installs and a reboot.
 * that did not work, so i'm trying to install it w/o the mod passenger apt package using 
@@ -925,6 +928,10 @@ export JAVA_HOME=$JAVA_HOME
 * system preferences->other->java 
 * java button, "view" then add the -Xnoagent -Xdebug -Xrunjdwp:transpor... stuff to the "Runtime Parameters"
 * start the applet then connect using eclipse.
+
+#proxy
+
+ssh -i ~/Downloads/proxy.pem -D 2001 ubuntu@
 
 ##Quotes
 * as soon as you're in the smartest person in the room, go to another room.

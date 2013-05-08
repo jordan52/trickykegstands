@@ -1,5 +1,52 @@
 ### Today I Learned
 
+#### 2013 05 07
+
+I want to add a new dimension to the framework. one of risk management. So much of what we do is managing risk. Source control, alarm clocks, cars that never break down, air bags, and background checks, are just a tiny portion of what we do every day to manage or mitigate risks. I hadn't thought much of risk management before i studied finance. Seeing practical examples in that context helps me understand at a fundamental level how it bleeds into daily life and how people pay so much just to minimize risk. Whether it be paying top dollar for a reputable plumber, or subscribing to linkedin so you can get a handle on someone's clout before interacting with them. How I could have missed something that is so ingrained in the human (spirit? psyche? what's a good word to put here?) for so long boggles my mind. With that said, now we have something about a generalized framework for making people care about a product/cause/issue with a side of the "machine" idea (presented below), the habit cue routine reward motif, with a heaping side of risk management. This, of course, is a half-baked idea that has been kicking around inside my head for a few months. I'm waiting for it to click so I can write something about it that makes sense. Until then... 
+
+#### 2013 05 04
+
+People still listen to this? Youtube la dispute, defeater, touche amore, and pianos become the teeth.
+[skeuomorphism](http://en.wikipedia.org/wiki/Skeuomorph) - <http://www.themachinestarts.com/read/2012-11-how-we-started-calling-visual-metaphors-skeuomorphs-why-apple-design-debate-mess>
+
+<http://www.bwater.com/Uploads/FileManager/research/how-the-economic-machine-works/How-the-Economic-Machine%20Works--A-Template-for-Understanding-What-is-Happening-Now-Ray-Dalio-Bridgewater.pdf>
+
+#### 2013 05 03
+
+A few years ago I read The Road in one sitting and cried my contacts out at the end. My dad and I went through some shit together and he was pretty much all I had for so many years. He was the only person on this earth who I actually liked. Sometimes it was horrible but I knew that he was doing his best and so we made mistakes together and basically trudged through the buckets of shit that life threw at us. He had no idea what he was doing. I was a kid. In my mind, the only important thing was we were together. If you've read the book, you might understand why I lost it at the end.
+
+Last night I watched the movie. I have my own son, now, and because of that, the story means something else. I'm no longer the scared child, I am the scared father who will do anything for the welfare of his child. I'll admit (sometimes too eagerly) that I have no idea what I am doing, but I am working with what I've got. I can only hope that I can be the father that my dad was to me.
+
+I'm lucky.
+
+#### 2013 05 02
+
+this might be the coolest boat on the planet <http://www.mongorocks.com/Boats/Classic-Boats/1940-Thunderbird-55-Hacker/12958720_t6Hd2v#!i=938275360&k=WTt8LMM>
+
+#### 2013 04 30
+
+* 4 of these <http://microcenter.com/product/341883/Outdoor_Security_Camera_with_Night_Vision> (either CAM-4PK-600 4-Pack Security Cameras for Night Owl DVRs or the cheaper Night Owl's CAM-4PK-CM245)
+* this <http://www.zoneminder.com/>
+* and this <http://store.bluecherry.net/pv-143-4-port-video-capture-card-30fps-oem.html>
+
+#### 2013 03 21
+
+* something about not blogging anymore because it is old, tired, and twitter/tumblr/medium/reddit is where I should be writing and if i want to make money, monentize a youtube video.
+* something else about how important blogging is because it is a resume/low-cal way for people to find out about you.
+* then another thing about music doing well because it sounds familiar and how outkast almost didn't make it with hey ya because it was too different and something else about how dj's did make it familiar by sandwiching it between music that did well because it was so familiar, making hey ya familiar and then selling a zillion copies.
+* and then another thing about how rosa parks wasn't the first person arrested on a bus, (read this <http://digital.wustl.edu/e/eop/eopweb/nix0015.0307.078ednixon.html> ) but how this particular instance (arrest) worked because she was well connected in the community, well liked by all, generally helpful and an all around amazing person who knew Edgar Nixon well enough who thought he could use her to win a case against the montgomery bus line. Heck, she even did work for the wife of a white lawyer who was the first person Ed Nixon called to figure out exactly why she was arrested.
+* then something about trying to go big always fizzles out (try to get everyone to buy in against a major issue and nothing will happen, but get an interconnected group to boycott bus service and get them to peer pressure everyone else into the boycott and then you've got something.)
+* something about a generalized framework for making people care about a product/cause/issue with a side of the "machine" idea (presented below) and the habit cue routine reward motif.
+
+
+
+
+
+#### 2013 04 18
+
+* <https://github.com/cantino/huginn>, <https://ifttt.com/wtf>
+
+
 #### 2013 03 30
 
 Wanting to build Bootstrap. 
