@@ -253,24 +253,57 @@ UNFINISHED.
 
 **[Class 10: After Web 2.0](http://blakemasters.tumblr.com/post/22660214207/peter-thiels-cs183-startup-class-10-notes-essay)**
 
+
+
 **[Class 11: Secrets](http://blakemasters.tumblr.com/post/22866240816/peter-thiels-cs183-startup-class-11-notes-essay)**
+
+Secrets -
+* monopoly vs competition (monopolies lie about being monopolies. competitors swear they're monopolies)
+* power law (most stuff is crap. about 2 things on the right side of the curve make up for everything else)
+* importance of distribution (salespeople are important)
+
+trick is, there are a lot of secrets out there. you have to find one and execute on it. There is a framework for finding these secrets.
+1. natural secrets - go out into the world and work until the universe reveals the secret.
+2. people secrets - people don't tell you everything.
+
+So, go out and figure out what people aren't telling you OR what the universe is not telling you. What people aren't telling you should give you a good idea of where to go looking for secrets. That's where you should direct your attention. Often, people will hide secrets about the universe, for ex. the power law. The idea is to ask questions to find out what is taboo, what is not talked about. Tesla succedded because they realized that cleantech was not about being clean, but more about being fashionable. So, they went for the high-end luxry market and won.
+
+Now, what do you do wiht your secrets?
+
+start up. don't tell secrets about people (julian assange). do share secrets about nature. tell your secrets and MOVE FAST.
+
 
 **[Class 12: War and Peace](http://blakemasters.tumblr.com/post/23250566538/peter-thiels-cs183-startup-class-12-notes-essay)**
 
+Decide if you want to fight or flee.
+
 **[Class 13: You Are Not A Lottery Ticket](http://blakemasters.tumblr.com/post/23435743973/peter-thiels-cs183-startup-class-13-notes-essay)**
+
+Luck vs. Skill in success. optimistic/pessimistic vs determinate/indeterminate - need to study this one more.
 
 **[Class 14: Seeing Green](http://blakemasters.tumblr.com/post/23787022006/peter-thiels-cs183-startup-class-14-notes-essay)**
 
+Of markets in clean energy and environment.
+
 **[Class 15: Back to the Future](http://blakemasters.tumblr.com/post/24122680868/peter-thiels-cs183-startup-class-15-notes-essay)**
+
+Ways to think about the future. Look at past predictions of the future and see where they went wrong. We're probably making similar predicting the future, now. Figure out where the "future" failed (nuclear, flying cars) and maybe concentrate in those areas.
 
 **[Class 16: Decoding Ourselves](http://blakemasters.tumblr.com/post/24253160557/peter-thiels-cs183-startup-class-16-decoding)**
 
+of biotech companies.
+
 **[Class 17: Deep Thought](http://blakemasters.tumblr.com/post/24464587112/peter-thiels-cs183-startup-class-17-deep-thought)**
+
+Of AI companies
 
 **[Class 18: Founder as Victim, Founder as God](http://blakemasters.tumblr.com/post/24578683805/peter-thiels-cs183-startup-class-18-notes-essay)**
 
+Traits of founders - one interesting thing here is finding/being the scapegoat and the politics of sacrifice (britney spears).
+
 **[Class 19: Stagnation or Singularity?](http://blakemasters.tumblr.com/post/25149261055/peter-thiels-cs183-startup-class-19-notes-essay)**
 
+talking about the future with three experts.
 
 
 #### 2013 03 12
