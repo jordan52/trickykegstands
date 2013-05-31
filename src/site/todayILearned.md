@@ -1,5 +1,44 @@
 ### Today I Learned
 
+#### 2013 05 31
+
+I should probably use recline.js...
+
+#### 2013 05 29
+
+It has been a long time since I've run a java app from the command line. Re: the class path - Don't forget the quotes:
+
+java -cp "*" net.fiftytwo.juristat.misc.CaseLoader
+
+
+
+#### 2013 05 28
+
+Every night I sleep in the [recovery position](http://en.wikipedia.org/wiki/Recovery_position)
+
+#### 2013 05 21
+
+<http://vimeo.com/66294748>
+
+We read news and feel compelled to stay informed "to distract ourselves from the things we fear is being: criticized, called out as a fraud, being identified as a poser, being called out as someone who had no right to do the work that they just did." Find that person who's live tweeting the event you aren't at and wasting a half hour looking at those pithy comments. that person is hiding, they don't need that information. it's keeping them from doing scary work... What if you turn off information for a month and work on something that might get you fired or run out of town. Do that so you can say, "I made this." You have enough information to do your work. You don't _need_ it. Talking about stories that worked years ago at one place wouldn't work at another place because some places (people) are already carrying a bias. People who are getting paid to do what they love aren't getting paid for the work, they're really getting paid for their story. Learning how to see is what design really is. seeing the gap, and visualizing in advance of what is going to work. Be connected to the output of your work. Use that connection to learn what worked, what didn't, and how you can do it again. Do this by using your experience and immersing yourself in the interactions to learn. once you are sitting there reading your comments and crying about them, then you're probably not "seeing" anymore in a way that will help your work in a way that matters. If you do something that people will have to reference to describe something, then it will likely spread because people will use that in conversation so others will look it up. And idea that is easy to spread and talked about means you win. Get your idea to spread and the revenue will appear.
+
+I need a clear, locking thermostat guard.
+
+#### 2013 05 17
+
+I need to implement this - <http://www.elasticsearch.org/2011/05/13/data-visualization-with-elasticsearch-and-protovis/>
+
+#### 2013 05 16
+
+An MIT econ and finance prof's very accessible class notes: <http://web.mit.edu/rpindyck/www/Courses/>
+
+
+#### 2013 05 13
+
+Mathematical primers - <http://jeremykun.com/primers/>
+
+what is this? The master game by ropp. 60's creative psychology. wonder if it influenced dalio. (similar to alan watts? just realizing how much 60's pop philosophy i've gotten hit with today (something on reddit re:finance what if money was no object))
+
 #### 2013 05 07
 
 I want to add a new dimension to the framework. one of risk management. So much of what we do is managing risk. Source control, alarm clocks, cars that never break down, air bags, and background checks, are just a tiny portion of what we do every day to manage or mitigate risks. I hadn't thought much of risk management before i studied finance. Seeing practical examples in that context helps me understand at a fundamental level how it bleeds into daily life and how people pay so much just to minimize risk. Whether it be paying top dollar for a reputable plumber, or subscribing to linkedin so you can get a handle on someone's clout before interacting with them. How I could have missed something that is so ingrained in the human (spirit? psyche? what's a good word to put here?) for so long boggles my mind. With that said, now we have something about a generalized framework for making people care about a product/cause/issue with a side of the "machine" idea (presented below), the habit cue routine reward motif, with a heaping side of risk management. This, of course, is a half-baked idea that has been kicking around inside my head for a few months. I'm waiting for it to click so I can write something about it that makes sense. Until then... 

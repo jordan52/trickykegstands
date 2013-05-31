@@ -1,103 +1,7 @@
 #Checklists
 
-##Getting Seth to School
-
-###Monday Morning - Hope
-
-* Lunch Bag:
-    + 2 4-5oz bottles of milk
-    + 1 2oz bottle of milk
-    + 2 nipples
-* Stuffed Monkey
-* Swaddle
-* Pay for Daycare
-
-###Tuesday Morning - Hope
-
-* Lunch Bag:
-    + 2 4-5oz bottles of milk
-    + 1 2oz bottle of milk
-    + 2 nipples
-
-###Wed Morning - Mary's
-
-* Lunch Bag:
-    + 2 4-5oz bottles of milk
-    + 1 2oz bottle of milk
-    + 2 nipples
-* Breakfast
-* Lunch
-* Snack
-
-* Diaper Bag:
-    + Notebook
-    + Diapers
-    + Wipes
-    + Change of Clothes
-    + Bib
-
-
-* Pacifier on a Rope
-* Paste Mon/Tues log from Hope into Notebook
-
-
-###Thursday Morning - Mary's
-
-* Lunch Bag:
-    + 2 4-5oz bottles of milk
-    + 1 2oz bottle of milk
-    + 2 nipples
-* Breakfast
-* Lunch
-* Snack
-* Bib
-* Diaper Bag:
-    + Notebook
-    + Diapers
-    + Wipes
-    + Change of Clothes
-    + Pacifier on a Rope
-* **$100**
-
-###Friday Morning - Hope
-
-* Lunch Bag:
-    + 2 4-5oz bottles of milk
-    + 1 2oz bottle of milk
-    + 2 nipples
-
-##Diaper Bag
-
-* Spare Pacifier
-* Extra Set of Clothes
-* Toy
-* Burp Cloth
-* Bib
-* 4 Diapers
-* Wipes
-* Spoon
-* Puffs
-* Sippy Cup
-* If Milk
-    + Milk
-    + Ice Pack
-    + Nipples
-    + Nipple Cap
-    + White Cap
-
 ##How to build this document
-* use pandoc, make sure checklist.txt and checklist.css are in the Dropbox folder.
-
-~~~~
-cd /Users/jordanOriginal/Dropbox
-pandoc -s -S --toc -H checklist.css checklist.txt -o checklist.html
-
-*update*
-
-I added this to trickykegstands so 
-1) it is public. 
-2) i don't have to do the above command 
-3) I don't have to worry about being out of sync or losing any changes when working on it in multiple places. 
+* use pandoc via the trickykegstands makefile
 
 ~~~~
 
@@ -124,7 +28,7 @@ trickykegstands.com      me              S3             Route 53
 woerndleelectronics.net  John            S3             Route 53
 womenfacingdivorce.com   me              NOT USED
 womenseekingdivorce.com  me              NOT USED
-beta.juristat.com        Bob Ward        jordan Home IP Bob Ward
+demo.juristat.com        Bob Ward        jordan Home IP Route 53
 
 ## AWS Instances
 
@@ -144,7 +48,7 @@ all now in S3 buckets. I shut it down at 12:54pm 20130216 after
 copying the juristat database to /jordan/httpd/analyticsjust.us/archivedData/website20130216
 
 
-* 107.21.228.187 is thesorrypeople.com it has postgres, solr, 
+* 107.21.228.187 is thesorrypeople.com it **IS TURNED OFF** has postgres, solr, 
 and tomcat. Postgres is not very reliable. in fact, it goes down all the time.
 I think the data is stored on an EBS mount which might have something to do with it.
 service postgresql-9.0 restart is your friend.
@@ -348,6 +252,8 @@ static_media//mp3 to get rid of the double slashes. Do that by running grep -lr
 
 * Normal Tunnels:
 ssh  -N -p port user@theserver.com -L 2000:localhost:25 
+ssh  -N -p 159 <macuser>@<mydomain> -L 9999:localhost:5900  then connect to server, vnc://127.0.0.1:9999
+
 
 -P port tells ssh to use a non standard port on the remote machine
 -f tells ssh to go to the background as soon as it starts (not used)
@@ -451,6 +357,22 @@ Paste your public key into authorized keys.)
 * now you can simply do ssh \<user\>@\<server\> and it'll let you in, no matter who you are on the client 
 (your laptop or whatever) side.
 
+##SSH keys - multiple based on server.
+
+ Adapted from <http://www.karan.org/blog/index.php/2009/08/25/multiple-ssh-private-keys>
+
+* grab the *.pem file (like from aws) copy it to your .ssh directory. chmod 600 it.
+* cd ~/.ssh
+* touch config
+* chmod 600 config
+* put the following contents in config:
+
+Host *.compute-1.amazonaws.com
+  IdentityFile ~/.ssh/somePrivateKey.pem
+  User ec2-user
+  
+You're set. Any time you ssh to an amazon box, it will try that key. Any other place you ssh to will try your default id_rsa key.  
+  
 
 ##Add Harddrive to Linux mounted to /mnt/data
 
@@ -563,6 +485,9 @@ remember option/command/A will throw you in block select mode. hit it again to t
 * global find replace using xargs and sed works on os x 
 find . -type f | xargs sed -i '' -e 's/juristat/boilerplate/g'
 
+* keep just the end of each line that matches a regex:
+sed -n -e 's/^.*New\ York\///p' newYorkCases.txt > newYorkCasesCleaned.txt
+
 ##create a boilerplate app using the juristat code base
 * copy juristat project to a boilerplate directory
 * find . -type f | xargs sed -i '' -e 's/juristat/boilerplate/g'
@@ -653,7 +578,38 @@ shared lib
 scripts: <http://thetek.net/how-to/13-how-to/42-how-to-install-graylog2-on-ubuntu.html>
 * so, i did that and created an /etc/init.d/graylog2-web-interface bash script that is crap but it works
 
+#### using the Graylog (ami-2795f64e) AMI
+
+* elasticip 54.225.110.210
+* dns graylog.juristat.com
+* m1.small
+* graylog security group - 22, 80 and 12201 (UDP) are open.
+* EBS vol-9f9d73c7 16GiB as /dev/sda1
+
+Problem is it will crash and right now I can't even force-stop the instance.
+
 ##ElasticSearch
+
+**this might be better <http://www.elasticsearch.org/tutorials/deploying-elasticsearch-with-chef-solo/>**
+
+I used that to build the cookbooks. I ran :
+
+knife solo cook ec2-54-242-218-239.compute-1.amazonaws.com nodes/elasticsearch.json 
+
+to build it. Of course, when i did that, chef threw an error on cooking. elasticsearch won't start. i had to ssh to the box and rm some symbolic links and recreate for some reason:
+
+rm /usr/local/bin/elasticsearch
+rm /usr/local/bin/plugin
+ln -s /usr/local/elasticsearch/bin/elasticsearch /usr/local/bin/elasticsearch
+ln -s /usr/local/elasticsearch/bin/plugin /usr/local/bin/plugin
+
+I had to run the commands in patches.sh
+AND, i had to run bin/plugin -install elasticsearch/elasticsearch-cloud-aws/1.11.0 to get the full install working.
+
+run service monit stop to pause monit.
+
+again, the whole time I was using <http://www.elasticsearch.org/tutorials/deploying-elasticsearch-with-chef-solo/>
+
 
 * I installed elasticsearch on my macbook. it was this easy:
 * cd /jordan/projects/code/
@@ -730,7 +686,7 @@ pg_dump -c <db_name> > backupFile.bak
 * Logo/branding
 * PR agency - pay one to get your name out.
 * Bug tracker as a todo list
-* Visiter log in office
+* Visitor log in office
 
 ##Using pandoc
 * Install it... dmg package, or available in distros apt-get, etc.
@@ -877,7 +833,9 @@ by time you read this the chef recipe will be updated.
     + On 192.168.1.4 i added jordan to the "users" group (usermod -a -G users jordan). and chmod'd the group of /mnt/data to root:users
     + on the jenkins machine, run rsync -avz * jordan@192.168.1.4:/mnt/data/jenkinsBackup\<yyyymmdd\>/
 * either the tomcat deploy plugin didn't work, or i just didn't like it, SO, i deploy to tomcat6 using 
-org.codehaus.cargo:cargo-maven2-plugin:redeploy in my pom.
+org.codehaus.cargo:cargo-maven2-plugin:redeploy in my pom. add what you need to the pom, then in jenkins under config project->build->Goals and options make sure to put org.codehaus.cargo:cargo-maven2-plugin:redeploy after site and package.
+
+* if you need to modify settings.xml, find it in /etc/maven/settings.xml However, if you want a project specific settings file (i'm sure you do) follow this advice from stackoverflow - "Go to the 'Build' Section of the job and click "Advanced". There is a 'Settings File' option there. Specify the location your 'settings.xml' file."
 
 ##Get Anki 2 to work on my mac
 * <http://apple.stackexchange.com/questions/15695/how-can-i-get-latex-working-on-anki>
@@ -929,6 +887,13 @@ export JAVA_HOME=$JAVA_HOME
 * java button, "view" then add the -Xnoagent -Xdebug -Xrunjdwp:transpor... stuff to the "Runtime Parameters"
 * start the applet then connect using eclipse.
 
+
+#using chef-solo with virtualbox
+My notes are here <http://trickykegstands.com/virtualBoxVmsCloningHowTo.html>
+
+#using amazon RDS 
+
+
 #proxy
 
 ssh -i ~/Downloads/proxy.pem -D 2001 ubuntu@
@@ -972,6 +937,20 @@ awesome shoes.
 -------------------------------------------------------------
 
 * <http://forums.watchuseek.com/f39/breitling-navitimer-brief-history-most-famous-breitling-all-25057.html>
+
+* regular cleaning
+* landscaping
+* back porch and overhang (rodents)
+* basement
+* car maintenance
+
+
+* skid steer the yard
+* gutters
+* landscaping
+* french drains
+* mold remidiation
+* get rid of mice
 
 ##Workflow for SOP's/checklists for System validation
 installation steps
