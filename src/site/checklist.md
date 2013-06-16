@@ -623,6 +623,11 @@ a service on ubuntu (aww shit, i forgot to paste the link)
 * to stop it, i did a ps -A | grep lastic and did a kill -9 on the PID. I'm sure there's a better way
 but it works for now
 
+###delete an Elastic Search index, refresh, then create it.
+curl -XDELETE 'http://ec2-54-242-218-239.compute-1.amazonaws.com:9200/juristat/'
+curl -XPUT 'http://ec2-54-242-218-239.compute-1.amazonaws.com:9200/juristat/'  
+curl -XPOST 'http://ec2-54-242-218-239.compute-1.amazonaws.com:9200/juristat/_refresh'
+
 
 ##Juristat environment
 
@@ -660,6 +665,12 @@ pg_dump -c <db_name> > backupFile.bak
 * CREATE DATABASE databaseName ENCODING 'UTF8';
 * psql -U postgres -d databaseName
 * \\d (list tables)
+
+## postgres - stop and start on mountain lion
+* open terminal sudo postgres
+* cd /Library/PostgreSQL/9.1/bin
+* ./pg_ctl -D ../data/ stop
+* ./pg_ctl -D ../data/ start
 
 ##To start a business
 
@@ -893,6 +904,12 @@ My notes are here <http://trickykegstands.com/virtualBoxVmsCloningHowTo.html>
 
 #using amazon RDS 
 
+I had some trouble getting hadoop map jobs to work with the mysqlTest databse, so I did this:
+mysql -h mysqltest.cffbuilytz0u.us-east-1.rds.amazonaws.com -P 3306 -u postgres -p
+use mysqlTest;
+GRANT ALL ON `%`.* TO postgres@`%`;
+
+solution found <http://www.fidian.com/problems-only-tyler-has/using-grant-all-with-amazons-mysql-rds> and here <https://sagebionetworks.jira.com/wiki/display/PLFM/Setting+up+AWS+RDS+(MySQL)+for+Synapse>
 
 #proxy
 
