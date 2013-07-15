@@ -102,6 +102,10 @@ Macbook       .99
 
 --------------------------------------------------------------
 
+## AWS IAM Login url
+
+<https://ACCOUNTNAME.signin.aws.amazon.com/console/ec2>
+
 ##Backup Everything
 
 * macbook
@@ -268,6 +272,8 @@ machine at work.
     + then when I get home: ssh -p 2210 localhost
 
 * More examples: <http://rhnotebook.wordpress.com/2010/02/13/reverse-ssh-port-forwarding-t-o-i-c-o-r-g/>
+
+* Bob set it up so that I can tunnel right to the dev box in the office with ssh -p 9999 nagios.juristat.com
 
 ##Enable JPDA on a Ubuntu tomcat6 service
 
@@ -466,11 +472,13 @@ based-on-patters
 find . -name "\*old\*" -exec bash -c "mv \$1 \'echo \$1 | sed s/old/new/\'" - {} \;
 
 * Reroute port 8080 to 80
-iptables -A PREROUTING -t nat -i eth0 -p 
-tcp --dport 80 -j REDIRECT --to-port 8080
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
 then run
 iptables-save or else the change will 
 disappear after a reboot.
+
+* Do the same thing except 8443 to 443
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8443
 
 * find current mecurial changeset id 
 hg id -i
@@ -487,6 +495,9 @@ find . -type f | xargs sed -i '' -e 's/juristat/boilerplate/g'
 
 * keep just the end of each line that matches a regex:
 sed -n -e 's/^.*New\ York\///p' newYorkCases.txt > newYorkCasesCleaned.txt
+
+* use macvim as a quick diff between files:
+mvim -d motions.jsp marketing.jsp 
 
 ##create a boilerplate app using the juristat code base
 * copy juristat project to a boilerplate directory
@@ -671,6 +682,34 @@ pg_dump -c <db_name> > backupFile.bak
 * cd /Library/PostgreSQL/9.1/bin
 * ./pg_ctl -D ../data/ stop
 * ./pg_ctl -D ../data/ start
+
+## mysql 
+* redirect output to csv
+
+SELECT * INTO OUTFILE '/tmp/result.csv'
+FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+ESCAPED BY '\\'
+LINES TERMINATED BY '\n'
+FROM dbCase;
+
+* add an index to speed up findByStateCourtCodeLocationNumber
+
+ALTER TABLE dbCase ADD INDEX covering_index (number,location,courtCode,state); 
+ALTER TABLE dbCase_Party ADD INDEX covering_index (parties_PARTY_ID);;  to speed up the parties search. 23 seconds before. 19.8 seconds after...
+
+* copy database or table to remote
+
+mysqldump localDbName tableName -uUser -pPassword | mysql -h remote.com -u User -pPassword remoteDbName
+
+
+##using amazon RDS 
+
+I had some trouble getting hadoop map jobs to work with the mysqlTest databse, so I did this:
+mysql -h mysqltest.cffbuilytz0u.us-east-1.rds.amazonaws.com -P 3306 -u postgres -p
+use mysqlTest;
+GRANT ALL ON `%`.* TO postgres@`%`;
+
+solution found <http://www.fidian.com/problems-only-tyler-has/using-grant-all-with-amazons-mysql-rds> and here <https://sagebionetworks.jira.com/wiki/display/PLFM/Setting+up+AWS+RDS+(MySQL)+for+Synapse>
 
 ##To start a business
 
@@ -902,15 +941,6 @@ export JAVA_HOME=$JAVA_HOME
 #using chef-solo with virtualbox
 My notes are here <http://trickykegstands.com/virtualBoxVmsCloningHowTo.html>
 
-#using amazon RDS 
-
-I had some trouble getting hadoop map jobs to work with the mysqlTest databse, so I did this:
-mysql -h mysqltest.cffbuilytz0u.us-east-1.rds.amazonaws.com -P 3306 -u postgres -p
-use mysqlTest;
-GRANT ALL ON `%`.* TO postgres@`%`;
-
-solution found <http://www.fidian.com/problems-only-tyler-has/using-grant-all-with-amazons-mysql-rds> and here <https://sagebionetworks.jira.com/wiki/display/PLFM/Setting+up+AWS+RDS+(MySQL)+for+Synapse>
-
 #proxy
 
 ssh -i ~/Downloads/proxy.pem -D 2001 ubuntu@
@@ -956,15 +986,16 @@ awesome shoes.
 * <http://forums.watchuseek.com/f39/breitling-navitimer-brief-history-most-famous-breitling-all-25057.html>
 
 * regular cleaning
-* landscaping
+* landscaping and implement regular maintenance like aeration and edging.
 * back porch and overhang (rodents)
 * basement
+* gutters
 * car maintenance
 
 
 * skid steer the yard
 * gutters
-* landscaping
+* landscaping, 
 * french drains
 * mold remidiation
 * get rid of mice

@@ -1,17 +1,47 @@
 ### Today I Learned
 
+#### 2013 07 03
+
+How is it I don't have anything in here about the zurich axioms?
+
+And then there's <http://en.wikipedia.org/wiki/Prospect_theory> which is interesting in both a behavioral economics way and a how-to-live-a-life kind of way.
+
+#### 2013 06 24
+
+again, don't forget <http://en.wikipedia.org/wiki/Logistic_regression> <http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html>
+
+#### 2013 06 19
+
+Starting points for value screening <http://www.reddit.com/r/SecurityAnalysis/comments/1gag5l/value_screening_metrics/>
+
+A man in the parking garage shoved $5k and a red pill into my hand this morning. He said I could keep the money if I put the red pill in my next load of whites. The pill, he explained, would turn everything a pale shade of pink. I would have to wear the clothes in public. 'Trust me, we have people watching,' he said, 'There will be... consequences if you do not follow the instructions.' Apparently, they do this just enough to keep people buying fancy laundry detergent and splitting what could be one load of laundry into two or three. I converted the cash into a starbucks gift card because it is impossible to make drinkable coffee at home.
+
+#### 2013 06 18
+
+A nice intro to R data frames : <http://ww2.coastal.edu/kingw/statistics/R-tutorials/dataframes.html>
+
+#### 2013 06 17
+
+"Far away is close at hand in images of elsewhere." - googleit.
+
+<http://en.wikipedia.org/wiki/List_of_cognitive_biases>
+
+The difference between a rocket and a missile is a rocket is unguided.  Also, you spell missile with two i's.
+
+lumbermissile.com is available along with lumberrocket.com. This is funny in a certain context. thank you, come again.
 
 #### 2013 06 16
 
-Rule of Thumb - guess how much money per year you need. Multiply by 25 to represent about 4% after inflation. This is how much cash on hand you need to live off dividends forever excluding taxes and blah blah blah, etc.
+Rule of Thumb - Guess how much money per year on which you need to live then multiply by 25. This is how much $ in a brokerage account you'll need with a steady 4% return after inflation to live off dividends forever excluding taxes and blah blah blah, etc.
 
-<http://en.wikipedia.org/wiki/Depressive_realism> and more from reddit comment <http://www.reddit.com/r/depression/comments/1gdxry/depression_feels_more_real_optimism_feels_like_a/cajbziq>  namely: 
+<http://en.wikipedia.org/wiki/Depressive_realism> pretty much says that nothing in this comment is Truth, but the comment <http://www.reddit.com/r/depression/comments/1gdxry/depression_feels_more_real_optimism_feels_like_a/cajbziq> _is_ nice. Namely: 
 
-* "It's important to realize the impact of optimism vs. pessimism. A pessimistic person is less likely to set high expectations, or high standards. As a result, they are less likely to be disappointed. A pessimistic person is less likely to be step outside of their comfort zone. As a result, they are less likely to face failure."
-*  "an optimistic person is more likely to attempt something that would be beyond their perceived abilities. As a result, they are more likely to succeed. An optimistic person is more likely to search beyond the bleakness of a current perceived state, and as a result is more likely to find happiness."
+* "It's important to realize the impact of optimism vs. pessimism. A pessimistic person is less likely to set high expectations, or high standards. As a result, they are less likely to be disappointed. A pessimistic person is less likely to be step outside of their comfort zone. As a result, they are less likely to face failure. [...] an optimistic person is more likely to attempt something that would be beyond their perceived abilities. As a result, they are more likely to succeed. An optimistic person is more likely to search beyond the bleakness of a current perceived state, and as a result is more likely to find happiness."
 * "Confidence is often just healthy, controlled delusional thinking. Confidence is choosing to press on despite failure and disappointment. Confidence is therefore strength;"
 * "Take a moment to separate pessimism from realism as well. Realism is the seeing of reality, in all its darkness as well as its light. Pessimism is the seeing of darkness and the giving into darkness. You can be a realist without being a pessimist."
 * "do you want to be a pessimist, and simply wallow in the bleakness of depression for the sake of seeing the darkness in reality, or do you want to fight it with confidence and control?"
+
+And from an old episode of Mad Men, "If you don't want to drink, you don't have to drink."
 
 #### 2013 06 12
 
@@ -30,7 +60,7 @@ I've stopped taking my pills. I feel like I've welcomed a best friend back into 
 
 The pills were good because I learned something. I can now look at my old friend squarely and say, 'What is wrong with you?' It is like going home after graduation and having a night out with your buddy who still lives at home and blazes all day. You miss that life but you're looking at it from new eyes. With those eyes you know you'll be able to wake up tomorrow and do something. I once thought there was no prize for being functioning adult, but being able to get outside and pay your bills is the prize. It is Enough.
 
-And, last night was spent with someone who is about to have a child. Sometimes I wonder why people don't ask my opinions or for advice then I realize all these ideas and thoughts are on the inside and the bit I let out is what typically makes an unlikable buffoon. So, I shrug and think, 'yeah.' As for the advice or 'what I've learned' there is this. Having a child made me realize we are made up animals. Nothing special. We are ordinary mammals who are slaves to our own biochemistry and evolution with a level of whimsy enabled by our laughably large cerebral cortex. The whimsy can make us believe we are different than a cow or an orangutan in that we make up abstractions about ourselves that allow us to ignore what we are.
+And, last night was spent with someone who is about to have a child. Sometimes I wonder why people don't ask my opinions or for advice then I realize all these ideas and thoughts are on the inside and the bit I let out is what typically makes an unlikable buffoon. So, I shrug and think, 'yeah.' As for the advice or 'what I've learned' there is one thing I'd probably not say to a half stranger over drinks. Having a child made me realize we are made up animals. Nothing special. We are ordinary mammals who are slaves to our own biochemistry and evolution with a level of whimsy enabled by our laughably large cerebral cortex. The whimsy can make us believe we are different than a cow or an orangutan in that we make up abstractions about ourselves that allow us to ignore what we are.
 
 
 #### 2013 05 31
