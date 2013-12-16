@@ -1,5 +1,216 @@
 ### Today I Learned
 
+#### 2013 12 10
+
+that accounting class I never finished <https://class.coursera.org/accounting-001/lecture/index>
+
+#### 2013 11 30
+
+Some tunings - DADGAD, DGCGAC, FACGCE...  DADF#AD
+
+#### 2013 11 28
+
+Chicago:
+Their / They're / There  <http://www.youtube.com/watch?v=m98pIKAYwbs>
+American Football <http://www.amazon.com/American-Football/e/B000APPVD6/digital/ref=ntt_mp3_rdr?_encoding=UTF8&sn=d>
+Owen <http://www.amazon.com/Owen/e/B000APOV3M/digital/ref=ntt_mp3_rdr?_encoding=UTF8&sn=d>
+Owen playlist <http://www.youtube.com/watch?v=OiYpHzCBOyk&list=ALGLx1orRGw4VLFLCFfLPzluyBUsOUY7x0>
+
+
+#### 2013 10 25
+
+Contrapposto
+
+#### 2013 10 15
+
+danny brown franzen is a band I'd like to be in.
+
+#### 2013 10 08
+
+To win you must first identify what it means to win, then figure out what the game is. Learn its rules, find your competition. Once you know everything there is to know about the game, practice becasuse the only way to win is either be better than everyone else or cheat. then there's the idea of focusing on 1) valuation - how much is this worth and how much is it worth relative to other things. 2) Trend - what is the macro doing in sum? expanding? contracting? 3) Inflation (this pertains more to finance than the general game) What's the overall trend? 3) Earnings - how are others doing in aggregate? Is the macro working or dying? 5) Credit - what credit is available and why is it (or why isn't it?) there has to be a reason and it likely is relevant. 
+
+
+#### 2013 10 05
+
+It was my first day at the job site and they said, "There is the pile of 2x4's. Build a wall from here to there and another over there." I got my tools and started working. I masured twice, cut the wood square, nailed it right. I worked quickly, methodically. I checked it twice with a level before securing it to the floor. My boss came back from the store and yelled. 
+
+"What the #%Cd is taking you so long?!?"
+
+"I don't know how I can work any faster."
+
+"Is that a level? Son, we don't have time for any of that. Eyeball it. We'll square everything up when we set trusses."
+
+I am sure there isn't a civil engineer out there who couldn't design a concrete span that would last forvever. I'm also pretty sure there isn't hardly a bridge bult today that will last more than 100 years. We are engineers. Our job is to build things that are good enough. we aren't paid to find the best solution. we're paid to quickly find one that is just good enough and saves time and money.
+
+I am an engineer. My job is to build things that are 'good enough' while working within the constraint of cost. I'd like to believe I could build something beautiful given enough time and money. However, that is not my job. I need to get something that mostly works into production so I can go home. This, of course, doesn't mesh well with the need to build good code but again, i am an engineer. I'm sure there are civil engineers out there who are sad they can't build a bridge that will last forever. I'm sure there are mechanical engineers out there designing car fuel pumps who laugh that what thye're 
+
+#### 2013 09 30
+
+re: spaced repetition learning <http://www.gwern.net/Spaced%20repetition>
+
+re: learning about monentary policy by reading a guy's lessons learned after trying to build a simulation game <http://esoltas.blogspot.com/2013/09/5-things-i-learned-from-fedsim.html>
+
+#### 2013 09 29
+
+Some vim plugins I need to take the plunge:
+
+
+<http://majutsushi.github.io/tagbar/>
+<http://www.vim.org/scripts/script.php?script_id=3465>
+<http://thomashunter.name/blog/installing-vim-tagbar-with-macvim-in-os-x/>
+<http://stackoverflow.com/questions/6972114/vim-omnicomplete-in-real-time>
+<http://blogs.warwick.ac.uk/dwatkins/entry/vim_omnicomplete_awesomeness/>
+<https://github.com/Shougo/neocomplcache.vim>
+
+and I need to learn tmux - <http://en.wikipedia.org/wiki/Tmux> <http://superuser.com/questions/236158/tmux-vs-screen>
+
+Unrelated - Game theory trail:
+
+<http://en.wikipedia.org/wiki/Alvin_E._Roth>
+<http://en.wikipedia.org/wiki/Stable_marriage_problem>
+<http://en.wikipedia.org/wiki/Hospital_resident#Matching_algorithm>
+
+<http://en.wikipedia.org/wiki/Incentive_compatibility>
+
+
+And even more unrelated, some reading from the epicuriandealmaker
+<http://www.law.yale.edu/documents/pdf/cbl/Gorton_Some_Thoughts_on_the_Recent_Financial_Crisis_Aug_29.pdf>
+<http://www.lse.ac.uk/CPNSS/projects/CoreResearchProjects/ContingencyDissentInScience/DP/DP_Cartwright0509Online.pdf>
+
+
+#### 2013 09 26
+
+Rambling Without Context:  Why I'm Not Mad. There isn't a us v. them because them don't exist. To show this, we use a combination of nash equilibrium, the law of averages (and keep in mind just how average things actually are AND that there is a whole left hand side to that bell curve) and how people are indeed 'different' and have, dependent on the instant of time sampled, different motivations. 
+
+
+I noticed some talk about R&D and how that relates to a young company as it transitions to a more stable, larger and aged entity. To me, this helps explain where apple is at right now and why pfizer did what it did re: layoffs in r&d.
+
+<http://aswathdamodaran.blogspot.com/2013/09/decline-and-denial-requiem-for.html>
+<http://www.whopperinvestments.com/rd-bureaucracy>
+<http://aswathdamodaran.blogspot.com/2013/09/rebirth-and-reincarnation-escaping.html>
+
+#### 2013 09 23
+
+A case study for increasing developer stock in a city. STL 2013
+ 
+1. attract existing talent
+  - strangeloop
+2. create an attractive environment for the talent
+  - big players
+  - startups
+  - education
+  - recreation
+3. create talent from within
+  - launchcode
+  - urban programs
+
+#### 2013 09 22
+
+<http://www.gametheory101.com/>
+<http://www.reddit.com/r/finance/comments/1mkb3i/thinking_of_going_into_finance/>
+<https://class.coursera.org/accounting-001/lecture/index>
+
+#### 2013 09 21
+
+"I don't know who discovered water, but it wasn't a fish." - <http://www.ecotopia.com/webpress/futures.htm> see also "this is water"-DFW
+
+<http://www.ecotopia.com/webpress/nucam/trying.htm>
+
+<http://center.sustainability.duke.edu/sites/default/files/documents/system_intervention.pdf>
+
+<http://en.wikipedia.org/wiki/Twelve_leverage_points>
+
+<http://www.sustainabilityinstitute.org/pubs/Leverage_Points.pdf>
+
+#### 2013 09 12
+
+Blind Willie Johnson
+
+#### 2013 09 11
+
+<http://www.bloomberg.com/news/2013-09-09/woodford-s-theories-rooted-in-japan-slump-embraced-by-bernanke.html> and "Interest and Prices: Foundations of a Theory of Monetary Policy"
+
+Older versions of bootstrap docs - <http://bootstrapdocs.com/>
+
+#### 2013 09 10
+
+Full Text Search for Apps and Patents - <http://patft.uspto.gov/netahtml/PTO/index.html>
+Assignment Data (missing pending and abandoned apps) - <http://assignments.uspto.gov/assignments/q?db=pat>
+Bulk Data From Google - <http://www.google.com/googlebooks/uspto-patents-pair.html>
+
+#### 2013 09 08
+
+There are some interesting theories on L'appel du vide out on the intranets. There was a great comment on reddit that i can't find back, but there are tons of other theories out there. good fun!
+
+#### 2013 08 20
+
+<http://www.google.com/googlebooks/uspto-patents.html>
+
+I spent an hour trying to find this back. So, I'm placing it here <http://www.washingtonpost.com/blogs/worldviews/wp/2013/07/16/the-amazing-surprising-africa-driven-demographic-future-of-the-earth-in-9-charts/> and along those lines:
+* <http://www.registerguard.com/rg/opinion/30156138-78/population-million-africa-billion-2100.html.csp>
+* <http://beta.fool.com/whichstockswork/2013/05/30/targeting-africa-as-the-new-china/35532/>
+* <http://alephblog.com/2012/11/29/on-human-fertility-part-2/>
+* <http://www.heritage.org/research/lecture/2013/02/unleashing-the-us-investor-in-africa>
+* <http://www.businessinsider.com/analyst-world-population-will-peak-at-85-billion-in-2030-2012-11>
+
+
+After visiting the Farnsworth house, this post makes me happy <http://www.oobject.com/category/12-buildings-inspired-by-the-farnsworth-house/> adding a "steel house" section to my checklist.
+
+#### 2013 08 14
+
+elasticsearch query tutorial <http://okfnlabs.org/blog/2013/07/01/elasticsearch-query-tutorial.html>
+
+#### 2013 08 09
+
+Re: Salad - "Once your free your mind about a concept of ingredients and flavors being correct, you can do whatever you want. So, nobody told me what to do, and there was no preconception of what to do."  I spent a few minutes last week thinking about what I need in a salad. Dark leafy greens, kalamata olives, cucumber, and marinated sundried tomatoes create a salad that is nearly spot on for me. I may add nuts when I decide which will work. Sunflower seeds, maybe? In the past, I felt I needed a good, stinky cheese on my salad. I've spent months smothering lettuce with blue cheese, feta, gorgonzola, but it never quite worked. Surprisingly, the kalmata olives provide the flavor I thought was provided by cheese. Today, I paired the salad with carrots dipped in peanut butter. I don't use dressing. (Photos available upon request)
+
+#### 2013 08 08
+
+I've had this link open for far too long. Finally putting it away. An interesting chart using d3 <http://timelyportfolio.github.io/rCharts_nyt_home_price/>
+
+#### 2013 08 01
+
+Some NLP people and things:
+
+<http://bcomposes.wordpress.com/>
+<http://www.jasonbaldridge.com/projects>
+<https://github.com/turian/textrank>
+
+Some NLP papers:
+<http://people.csail.mit.edu/francois/research/papers/is11-lda.pdf>
+<http://nlp.cs.nyu.edu/sekine/papers/li07.pdf>
+<http://cogcomp.cs.illinois.edu/files/presentations/BGU_WordRepresentations_2009.pdf>
+
+Some FP videos:
+
+<http://www.infoq.com/presentations/Value-Identity-State-Rich-Hickey>
+<http://www.infoq.com/presentations/Simple-Made-Easy>
+<http://www.infoq.com/presentations/Datomic-Database-Value>
+
+
+
+#### 2013 07 27
+
+<http://www.zengabros.com/>
+
+<http://www.zengabros.com/ski-boys>
+
+<http://www.zengabros.com/line-sight>
+
+
+
+#### 2013 07 21
+
+new metric - # mistakes per day. If I'm not making a ton of mistakes, I'm probably not doing anything worth doing.
+
+#### 2013 07 18
+
+I'd like to read, "The Norm Chronicles: Stories and Numbers About Danger." (<http://en.wikipedia.org/wiki/Microlife>,<http://en.wikipedia.org/wiki/Micromort>)
+
+#### 2013 07 15
+
+What are you doing? How are you getting users?
+
 #### 2013 07 03
 
 How is it I don't have anything in here about the zurich axioms?
@@ -8,7 +219,18 @@ And then there's <http://en.wikipedia.org/wiki/Prospect_theory> which is interes
 
 #### 2013 06 24
 
-again, don't forget <http://en.wikipedia.org/wiki/Logistic_regression> <http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html>
+again, don't forget 
+* <http://en.wikipedia.org/wiki/Logistic_regression> 
+* <http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html>
+
+and, on the k-means clustering front, this might be nice:
+<https://code.google.com/p/ekmeans/>
+
+and the idea of named entity recognition... i need to implement this:
+<http://stackoverflow.com/questions/17352469/how-can-i-build-a-model-to-distinguish-tweets-about-apple-inc-from-tweets-abo>
+
+and, of course, all of these:
+<http://en.wikipedia.org/wiki/Category:String_similarity_measures>
 
 #### 2013 06 19
 
@@ -71,7 +293,7 @@ I should probably use recline.js...
 
 It has been a long time since I've run a java app from the command line. Re: the class path - Don't forget the quotes:
 
-java -cp "*" net.fiftytwo.juristat.misc.CaseLoader
+java -cp " * " net.fiftytwo.juristat.misc.CaseLoader
 
 
 
@@ -593,7 +815,7 @@ I learned about [Haim](http://en.wikipedia.org/wiki/Haim_(band)) today from audi
 
 I'm pleased with my Warby Parker experience. I bought the Crane frames in Sugar Maple. On one hand they feel like inexpensive frames. On the other hand, they're nice looking, you can't beat the price, I got them in less than a week, and I can see. The only downside is I'll have to adjust them myself so they fit my face. I wonder what people who do not have a heat gun do.
 
-My app had a log4j.properties file in the classpath which had environment specific stuff hard coded into it (and therefore committed to mecurial.) Remember back when I pulled all the passwords and environment specific config out of the config files that lived in the webapp? I couldn't figure out how to do a similar thing with log4j.properties. So, I left it in my classpath (the WAR file.) Today I realized I can tell web.xml to look in /etc/\<appname\>/log4j.properties for the file. Yes, that path is hard coded, but, the /etc/\<appname\>/\<appname\>.properties file is also hard coded in applicationContext.xml. I feel relatively comfortable having just those two places that call out a directory that _has_ to exist before the app can start up. At this point, I can't think of any place in my app that has things that shouldn't be hard-coded in the source, database, or in some arbitrary place. Everything is in /etc/\<appname\>/*. Feels good, man. Added bonus is I can set up my graylog2 logger with appropriate originHost based on the machine that is running. That means I can filter by machine. Now I'll be able to easily tell what's coming from development, test, production, etc. 
+My app had a log4j.properties file in the classpath which had environment specific stuff hard coded into it (and therefore committed to mecurial.) Remember back when I pulled all the passwords and environment specific config out of the config files that lived in the webapp? I couldn't figure out how to do a similar thing with log4j.properties. So, I left it in my classpath (the WAR file.) Today I realized I can tell web.xml to look in /etc/\<appname\>/log4j.properties for the file. Yes, that path is hard coded, but, the /etc/\<appname\>/\<appname\>.properties file is also hard coded in applicationContext.xml. I feel relatively comfortable having just those two places that call out a directory that _has_ to exist before the app can start up. At this point, I can't think of any place in my app that has things that shouldn't be hard-coded in the source, database, or in some arbitrary place. Everything is in /etc/\<appname\>/ * . Feels good, man. Added bonus is I can set up my graylog2 logger with appropriate originHost based on the machine that is running. That means I can filter by machine. Now I'll be able to easily tell what's coming from development, test, production, etc. 
 
 NEATWHEELIES.COM IS AVAILABLE!!! If only I had a reason to buy it.
 

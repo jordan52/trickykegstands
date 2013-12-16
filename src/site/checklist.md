@@ -21,7 +21,7 @@ greenmachinesmidwest.com Jim             S3             Route 53
 jordan-rhonda.com        me              S3             Route 53
 menfacingdivorce.com     me              tumblr         GoDaddy
 menseekingdivorce.com    me              NOT USED
-rockuniform.com          me              tumblr         NO CLUE!?!
+rockuniform.com          me              Unknown        J.Kammerer
 thesorrypeople.com       me              107.21.228.187 Route 53
 thewoerndles.com         me              S3             Route 53
 trickykegstands.com      me              S3             Route 53
@@ -267,8 +267,8 @@ ssh  -N -p 159 <macuser>@<mydomain> -L 9999:localhost:5900  then connect to serv
 * Reverse Tunnel:
     + I'm at work, I ssh -R into my machine at home. When I get home, I log on to 
 my machine and ssh to a localhost:port which opens an ssh connection to the 
-machine at work.
-    + ssh -R 2210:localhost:22 myHomeServer.com
+machine at work. Here is a nice how-to <http://www.noah.org/wiki/SSH_tunnel>
+    + ssh -f -N -R 2210:localhost:22 myHomeServer.com   (-f forks it to the background. -N keeps you from executing a remote command)
     + then when I get home: ssh -p 2210 localhost
 
 * More examples: <http://rhnotebook.wordpress.com/2010/02/13/reverse-ssh-port-forwarding-t-o-i-c-o-r-g/>
@@ -319,6 +319,13 @@ But that didn't really work... so:
 
 Update /etc/init.d/tomcat6 to only find the sun 7 jdk
 
+##enable ssl on my local tomcat in eclipse
+edit server.xml - uncomment the 8443 sections
+by default on os x, the server will look for the key in ~/ with a password changeit. so, open a terminal, cd to ~/ and type
+keytool -genkey -alias tomcat -keyalg RSA
+start tomcat
+
+
 ##Get Postgres to accept external connections
 
 * Edit /etc/postgresql/9.1/main/pg_hba.conf
@@ -328,6 +335,105 @@ host    all             all             192.168.1.0  255.255.255.0      md5
 ~~~~
 
 lets anyone on the 192.168.1.0 network connect with a password
+
+
+## add a unix user then add them to a database
+
+adduser tom
+passwd tom
+
+su - postgres
+psql template1 OR psql -d template1 -U postgres
+CREATE USER tom WITH PASSWORD 'myPassword'
+GRANT ALL PRIVILEGES ON DATABASE jerry to tom;
+
+
+## postgres create database drop one, etc
+* <http://articles.slicehost.com/2009/5/7/postgresql-creating-and-dropping-databases>
+* log into the machine. 
+* sudo su - postgres
+* dropdb 'databaseName' will drop a database 
+* psql -U postgres (starts psql)
+* \\l (list databases)
+* CREATE DATABASE databaseName ENCODING 'UTF8';
+* psql -U postgres -d databaseName
+* \\d (list tables)
+
+## postgres - stop and start on mountain lion
+* open terminal sudo postgres
+* cd /Library/PostgreSQL/9.1/bin
+* ./pg_ctl -D ../data/ stop
+* ./pg_ctl -D ../data/ start
+
+
+## back up a big database and zip it:
+(from <http://www.postgresql.org/docs/9.1/static/backup-dump.html#BACKUP-DUMP-RESTORE>)
+
+pg_dump dbname | gzip > filename.gz
+
+gunzip -c filename.gz | psql dbname
+or
+cat filename.gz | gunzip | psql dbname
+
+## install postgres on aws using the chef-postgres cookbook
+
+launch an ec2 instance, ubuntu, small. set the security group to something called postgresUspto (only allow port 22) add your JordanWoerndle.pem as the private key
+
+knife solo prepare ubuntu@ec2-174-129-62-151.compute-1.amazonaws.com  (running this from the chef box didn't require a password...)
+knife solo cook ubuntu@ec2-174-129-62-151.compute-1.amazonaws.com nodes/postgresqlUspto.json
+
+now, to connect to the server, open a tunnel
+ssh -i /jordan/JordanWoerndle.pem -N ubuntu@ec2-174-129-62-151.compute-1.amazonaws.com -L 9876:localhost:5432
+and connect using pgadmin or whatever. uspto_raw has a user and password specified in postgresqlUspto.json
+
+###that worked fine but perfomance sucked so I tried moving data to a different volume.
+create the EBS volume 8GB in the same zone as the machine, name it. Attach it to the instance.
+
+sudo su
+apt-get install -y xfsprogs
+mkfs.xfs /dev/xvdf
+echo "/dev/xvdf /data xfs noatime 0 0" | sudo tee -a /etc/fstab
+mkdir -m 000 /data
+mount /data
+service postgresql stop
+nano /etc/postgresql/9.1/main/postgresql.conf
+  change data_directory = '/var/lib/postgresql/9.1/main' to data_directory = '/data'
+cp -r /var/lib/postgresql/9.1/main/* /data/.
+chown -R postgres:postgres /data
+chmod 0700 /data
+
+###that actually slowed down the query, let's try an IOPS EBS volume
+service stop postgresql
+umount /data
+create a 100GB 1000IOPS EBS volume and attach it as /dev/xvdf
+mkfs.xfs /dev/xvdf
+mount /data
+cp -r /var/lib/postgresql/9.1/main/* /data/.
+
+### that did nothing to increase speed. let's undo all that and change to a larger instance.
+service postgresql stop
+nano /etc/postgresql/9.1/main/postgresql.conf
+  change data_directory = '/data' to data_directory = '/var/lib/postgresql/9.1/main'
+umount data
+nano /etc/fstab 
+  delete the mount /data thing 
+shutdown -h now
+
+go to the aws action->change instance type -> AND THEN REALIZE ANY SUITABLE INSTANCE TYPE WILL COST $300 A MONTH. fuck that.
+
+you'll probably want to store data on a separate EBS volume ( I didn't) to do so:
+create an EBS volume 
+attach it to /dev/sdf
+format it sudo mkfs.ext4 /dev/xvdf
+mount it and edit fstab so it sticks around
+sudo mkdir -m 000 /vol
+echo "/dev/xvdf /vol auto noatime 0 0" | sudo tee -a /etc/fstab
+sudo mount /vol
+
+edit your node.json file to change the following param to /vol/data
+data_directory = '<%= node["postgresql"]["data_directory"] %> - default is /var/lib/pgsql/9.1/data
+
+run chef-solo
 
 
 ##Start SOLR Manually
@@ -379,6 +485,8 @@ Host *.compute-1.amazonaws.com
   
 You're set. Any time you ssh to an amazon box, it will try that key. Any other place you ssh to will try your default id_rsa key.  
   
+* generate the public key from a private key - ssh-keygen -y -f /path/to/private/key > publicKey.pub  
+  
 
 ##Add Harddrive to Linux mounted to /mnt/data
 
@@ -400,6 +508,19 @@ UUID=\<uuid from blkid\> and mount point to /mnt/data
 * Let's try it . From the host run VBoxManage controlvm \<NAME\> 
 acpipowerbutton and watch your cmd prompt that's logged into the server 
 you're shutting down. It should say, "gracefully shutting down" or whatever.
+
+##resize a VirtualBox guest's hard drive to 50GB
+
+* shut down the vm
+* back it up
+* VBoxManage modifyhd /root/VirtualBox\ VMs/ubuntu\ 12.04\ 64bit\ Server\ POSTGRES/ubuntu\ 12.04\ 64bit\ Server\ POSTGRES-disk1.vdi --resize 51200 
+* mount an ubuntu iso as the CD or the gparted iso found here <http://gparted.sourceforge.net/download.php> and boot off it.
+* use gpartd to resize both the device and the partition.
+* shutdown and disconnect the iso
+* start.
+* if you're using lvm, then you're mounted to /dev/mapper which doesn't automatically notice the larger disk size. fix that by doing:
+* lvextend -l +100%FREE /dev/mapper/ubuntu64bitServer-root
+* resize2fs /dev/mapper/ubuntu64bitServer-root
 
 ##Configure utf-8
 
@@ -499,6 +620,10 @@ sed -n -e 's/^.*New\ York\///p' newYorkCases.txt > newYorkCasesCleaned.txt
 * use macvim as a quick diff between files:
 mvim -d motions.jsp marketing.jsp 
 
+* list all open files on a volume (useful when trying to eject a drive)  sudo lsof "/Volumes/1TB"
+
+* create a user in ubuntu
+
 ##create a boilerplate app using the juristat code base
 * copy juristat project to a boilerplate directory
 * find . -type f | xargs sed -i '' -e 's/juristat/boilerplate/g'
@@ -558,6 +683,30 @@ http://www.exratione.com/2012/12/websockets-over-ssl-haproxy-nodejs-nginx/  here
 configuration - https://groups.google.com/forum/?fromgroups=\#!topic/socketstream/_KbMUPjsUaM
 Doing a script (called stepsToBuildInstallHaproxyWithSSL.txt right now) to build haproxy and forward it to a 
 local tomcat.
+
+* set up elastic load balancer with a signed wildcard cert.
+
+Buy a geotrust wildcard cert from namecheap.
+
+openssl genrsa 2048 > juristatWildcard.pem
+
+openssl req -new -key juristatWildcard.pem -out csrJuristatWildcard.pem  (no password!)
+
+manage your ssl cert via namecheap. paste csrJuristatWildcard.pem into the box and go through the process where
+they email you with the confirmation. Accept the confirmation. They then will send you an email with 2 certificates
+attached as text called Webserver and Intermediary. Copy Webserver to a file called juristat509Server.pem and
+Copy Intermediary to juristat509Intermediate.pem
+
+in EC2, go to Load Balancers. click the one you want to add the cert. click the "listeners" tab.
+add a https listener. click the ssl certificate column. give the new cert a good name. paste juristatWildcard.pem into
+private key. paste juristat509Server.pem into Public Key Certificate. Paste juristat509Intermediate.pem into
+Certificate Chain.
+
+save all the files to somewhere central.
+
+you're done.
+
+
 
 ##Dealing With Logrotate and rsyslog
 
@@ -639,6 +788,56 @@ curl -XDELETE 'http://ec2-54-242-218-239.compute-1.amazonaws.com:9200/juristat/'
 curl -XPUT 'http://ec2-54-242-218-239.compute-1.amazonaws.com:9200/juristat/'  
 curl -XPOST 'http://ec2-54-242-218-239.compute-1.amazonaws.com:9200/juristat/_refresh'
 
+####set the index to ignore malformed dates when indexing
+
+curl -XPOST 'localhost:9200/myindex/_close'
+curl -XPUT http://localhost:9200/myindex/_settings  with "{"index": {"index.mapping.ignore_malformed":"true"}}"
+curl -XPOST 'localhost:9200/myindex/_open'
+
+BUT, that doesn't work. Instead, pull down the index's mapping, save it as /tmp/mapping.json 
+
+curl -XGET http://localhost:9200/juristat/case/_mapping < /tmp/mapping.json
+
+and replace every instance of:
+
+{"type":"date","format":"dateOptionalTime"}
+
+with 
+
+{"type":"date","format":"dateOptionalTime", "null_value" : "null", "ignore_malformed":"true"}
+
+and push it up with curl -XPUT http://localhost:9200/myindex/case/_mapping -d @mapping.json
+
+now delete all the entries and try again.
+
+curl -XDELETE 'http://localhost:9200/myindex/case/_query' -d '{"match_all" : { }}'
+
+#### move an index from one machine to another.
+
+I process a lot of stuff locally then push it up to the cloud. During that step, i also push new things to ES. Instead of reindexing into the cloud ES, I move it using a backup script. The process is
+
+1. backup the local ES using a script which also creates a restore script. start with this and modify as necessary <https://gist.github.com/nherment/1939828> - (see deployDataToESandDatabase in /jordan/projects/code) REMOVE THE ALIAS before backing up... the alias will come along with the backup, so that's annoying. right?
+2. copy the data created by the backup process to the remote server to /tmp/es-backups
+3. run the restore script. 
+3. make sure all the data files under /usr/local/var/data/elasticsearch/elasticsearch/nodes/0/indices/INDEX NAME have correct permissions. You might also have to make sure all the write.lock files under /usr/local/var/data/elasticsearch/elasticsearch/nodes/0/indices/juristat20130820/ are gone (find . -name write.lock -print) (i deleted them before fixing permissions so I don't know what will happen if you do not delete them)
+4. wait patiently while the new ES instance processes the mess of data you threw at it. this can take a while and it may or may not make you really nervous.
+
+the idea is you create a new index, push a mapping, then copy the indices files to the new server. After rebooting ES will pick up the new files and you'll be good.
+
+Some things with that restore script... If you run backup a bunch of times, the contents of the script gets appended... that's a huge problem. READ THE SCRIPT AND MAKE SURE IT IS REASONABLE VEORE RUNNING IT.
+Next, you'll want to make sure the elasticsearch start/stop command is correct for the system you're restoring to. in my case, i had to change it to service elasticsearch restart.
+
+One thing I do not know
+
+
+#### Elasticsearch Query Tutorial
+
+Seems legit <http://okfnlabs.org/blog/2013/07/01/elasticsearch-query-tutorial.html>
+
+##Elastic Beanstalk
+
+* put a folder called .ebextensions in the root of your WAR. in there place YAML configuration files.
+I use this to handle the config files for my app that live in /etc/APPNAME and /var/log/APPNAME
 
 ##Juristat environment
 
@@ -652,6 +851,9 @@ created by maven. It is a really good idea to keep this feature working.
 /var/log which should be set on a server by server basis, anyway.
 * Database called juristat with a user/password that is also stored in the properties file.
 * you have to create a page name terms title Terms of Use with the content being the site's terms of use.
+* now you have to have a uspto database. connection params are stored in the properties file
+  
+
 
 #### juristat - adding startup parameters
 Juristat starts up and grabs a ton of parameters out of /etc/juristat/juristat.properties. If you want to
@@ -661,27 +863,22 @@ add something to there, you have to deal with it in 3 places.
 3. Add it to applicationContext.xml. this is where the value gets pulled from the properties file and set in
 the SystemSettings object.
 
-## backing up postgres
+#### juristat - grab new case files
 
-su postgres
-pg_dump -c <db_name> > backupFile.bak
+cd caseFiles2013-08-16-14-14-57
+s3cmd -c ~/.s3cfg-juristat sync s3://juristat-cases-sequence-files/2013-08-16-14-14-57/ .
+create a new elasticsearch index
+run mapping file - curl -XPUT http://localhost:9200/juristat20130920/case/_mapping -d @mapping.json
+create a new database
+update caseloader to use the new directory, es index and database
+run caseloader
+generate es-backup (do ctrl-f to find those procs in this doc)
+replicate the index in prod
+drop the case tables in prod
+mysqldump > mysql each table to prod
+move the juristat es alias to the new es
+restart tomcat
 
-## postgres create database drop one, etc
-* <http://articles.slicehost.com/2009/5/7/postgresql-creating-and-dropping-databases>
-* log into the machine. 
-* sudo su - postgres
-* dropdb 'databaseName' will drop a database 
-* psql -U postgres (starts psql)
-* \\l (list databases)
-* CREATE DATABASE databaseName ENCODING 'UTF8';
-* psql -U postgres -d databaseName
-* \\d (list tables)
-
-## postgres - stop and start on mountain lion
-* open terminal sudo postgres
-* cd /Library/PostgreSQL/9.1/bin
-* ./pg_ctl -D ../data/ stop
-* ./pg_ctl -D ../data/ start
 
 ## mysql 
 * redirect output to csv
@@ -695,7 +892,7 @@ FROM dbCase;
 * add an index to speed up findByStateCourtCodeLocationNumber
 
 ALTER TABLE dbCase ADD INDEX covering_index (number,location,courtCode,state); 
-ALTER TABLE dbCase_Party ADD INDEX covering_index (parties_PARTY_ID);;  to speed up the parties search. 23 seconds before. 19.8 seconds after...
+ALTER TABLE dbCase_Party ADD INDEX covering_index (parties_PARTY_ID); to speed up the parties search. 23 seconds before. 19.8 seconds after...
 
 * copy database or table to remote
 
@@ -742,6 +939,22 @@ solution found <http://www.fidian.com/problems-only-tyler-has/using-grant-all-wi
 * Install it... dmg package, or available in distros apt-get, etc.
 * if you are using a mac and plan to use latex or tex or generate a PDF, go [here](http://www.tug.org/mactex/morepackages.html) and download basictex. install it. open a command line and run sudo tlmgr update --self then run sudo tlmgr install dvipng (that's more for getting anki2 to run properly!) then you'll be all set for generating pdfs.
 * Make a file, then run pandoc -s FILENAME -o file.html
+
+##Using pandoc to create a 4x6 pdf (useful for notecards)
+
+* pandoc -V geometry:paperwidth=4in -V geometry:paperheight=6in -V geometry:margin=.25in -o output.pdf input.md
+* now make it smaller than 10pt font:
+* pandoc -D latex > sixPtFont.latex
+* add the following to sixPtTemplate.latex:
+  \usepackage{scrextend}
+  \changefontsizes[10pt]{6pt}
+  \linespread{0.5}
+* pandoc --template sixPtTemplate.latex -V geometry:paperwidth=4in -V geometry:paperheight=6in -V geometry:margin=.25in -o output.pdf input.md
+
+this totally works until you md file has unicode in it... strip it out. I tried using iconv -f utf8 -t ASCII til.md > noUnicode.md but that didn't work... I should probably just set up pandoc's latex engine to properly handle unicode.
+
+I wrote a bash script called command that is in /jordan/projects/code/pandocFourBySixCard that will do all the work for you.
+
 
 ##Using pandoc to convert trickykegstands to markdown then markdown to a finished site (full circle)
 
@@ -850,6 +1063,26 @@ maven can find it. It winds up in your \<distributionManagement\>\<repository\> 
 \<snapshotRepository\> section, too.
 * mvn dependency:tree is your savior when trying to figure out what is included and what isn't.
 
+#### Install a local jar and use it in your pom.
+
+A coworker gave me a jar and said, use this. Ok...
+
+mvn install:install-file -Dfile=/jordan/projects/code/juristat/src/main/lib/SubsequenceFinder-assembly-0.0.8-SNAPSHOT.jar\
+                         -DgroupId=com.juristat \
+                         -DartifactId=subsequencefinder \
+                         -Dversion=0.0.8 \
+                         -Dpackaging=jar
+
+and your dependency will look like:
+
+<dependency>
+    <groupId>com.juristat</groupId>
+    <artifactId>subsequencefinder</artifactId>
+    <version>0.0.3</version>
+</dependency>	
+
+of course, you won't be able to build this anywhere else... MAKE A PROJECT AND DO THE RIGHT THING!
+
 ##Integration, code checking servers
 
 * jenkins, sonar
@@ -900,8 +1133,66 @@ org.codehaus.cargo:cargo-maven2-plugin:redeploy in my pom. add what you need to 
 * unzip it to /usr/local/share
 * symlink it to /Library/Tomcat (I cannot 100% remember why i did that)
 
-##Install HBase on my mac
+##Install sbt on my mac
+* download it
+* unzip it to /usr/local/share
+* nano .bash_profile to add /usr/local/share/sbt/bin to the path
+* done
 
+##Install tmux on my mac
+mkdir /jordan/projects/code/tmux
+cd  /jordan/projects/code/tmux
+curl -OL http://downloads.sourceforge.net/tmux/tmux-1.8.tar.gz
+curl -OL https://github.com/downloads/libevent/libevent/libevent-2.0.21-stable.tar.gz
+tar xzf tmux-1.8.tar.gz
+tar xzf libevent-2.0.21-stable.tar.gz
+
+cd libevent-2.0.21-stable
+./configure --prefix=/opt
+make
+sudo make install
+
+cd ../tmux-1.8
+LDFLAGS="-L/opt/lib" CPPFLAGS="-I/opt/include" LIBS="-lresolv" ./configure --prefix=/opt
+make
+sudo make install
+
+You now have to run it using /opt/rin/tmux
+
+add the path to .bash_profile
+
+##Install Pathogen and solarized into macvim (or vim for that matter)
+mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+curl -Sso ~/.vim/autoload/pathogen.vim \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+add this to .vimrc: execute pathogen#infect()
+$ cd ~/.vim/bundle
+$ git clone git://github.com/altercation/vim-colors-solarized.git
+add this to your .vimrc
+syntax enable
+set background=dark
+colorscheme solarized
+
+##Install ctags
+mkdir ctags; cd ctags
+
+:~/ctags $ tar xzvf ctags-5.8.tar.gz
+:~/ctags $ cd ctags-5.8
+:~/ctags/ctags-5.8 $ ./configure
+:~/ctags/ctags-5.8 $ make
+:~/ctags/ctags-5.8 $ sudo make install
+
+##install tagbar (depends on ctags)
+
+really just follow instructions from <http://thomashunter.name/blog/installing-vim-tagbar-with-macvim-in-os-x/>
+
+then to use it hit esc \y <return> when you're in a file.
+
+## install pandas scipy ipython pythonnotebook pandas numpy matplotlib scipy scikit pymc
+* download the ScipySuperpack from the interenets. MAKE SURE YOU GET THE RIGHT VERSION FOR YOUR OS. i tried installing the os x 10.9 version on 10.8.5 and it caused all kinds of headaches.
+* to start ipython notebook run "sudo ipython notebook" be aware where your notebooks are stored and check the command line messages to see which profile is being used. URI is http://127.0.0.1:8888/ 
+
+##Install HBase on my mac
 * download it
 * unzip it to /usr/local/share
 * edit bash_profile to look like this:
@@ -945,6 +1236,41 @@ My notes are here <http://trickykegstands.com/virtualBoxVmsCloningHowTo.html>
 
 ssh -i ~/Downloads/proxy.pem -D 2001 ubuntu@
 
+#bootstrap docs for older versions:
+http://bootstrapdocs.com/v2.2.2/docs/base-css.html#forms
+
+#Fun with text files
+make a text file all lower case: tr '[:upper:]' '[:lower:]' < monsantoTitlesInDatabaseSortedNoQuotes.txt  > monsantoTitlesInDatabaseSortedNoQuotesUpcase.txt
+compare two text files to see which lines only exist in the first file: comm -23 monsantoTitlesAllSorted.txt monsantoTitlesInDatabaseSortedNoQuotes.txt
+remove all quotes from a file: sed s/\"//g monsantoTitlesInDatabaseSorted.txt > monsantoTitlesInDatabaseSortedNoQuotes.txt
+put a comma at the end of every line of a file: sed "s/$/,/g" syngentaAppnos.txt  > syngentaAppnosWithComma.txt
+remove all newlines from a file: tr -d '\n' < syngentaAppnosWithComma.txt >syngentaAppnosOneLine.txt
+
+to delete a whole line out of a file that starts with a certain string, do this:
+grep -v '^lineStartsWithThis' infile.txt > outfile.txt
+or use awk:
+awk '!/^linestartswiththis' infile.txt > outfile.txt
+
+now, delete a word from each line in a file using awk:
+awk '{gsub("the words to delete", "");print;}' input > output
+
+now use sed to delete everything on the line after the word number. this deletes all the spaces before number, too:
+sed 's/ *numb.*//' stripped3.txt > stripped4.txt
+
+now I want to delete every other newline, omit the -d ' ' option if you want them separated by a tab
+
+cat stripped4.txt | paste -d ' ' - -
+
+#Patent Data
+<http://www.google.com/googlebooks/uspto-patents.html>
+In CaseLoader's ConvertToJson, we have a program that extracts the XML from the PAIR files into JSON which is then shoved into elasticsearch.
+In NodeThrowaway we have code that queries ES by assignee to figure out which companies have the most patents.
+
+#Pandas
+
+* tips for scatter plots <http://stackoverflow.com/questions/14300137/making-matplotlib-scatter-plots-from-dataframes-in-pythons-pandas>
+* plotting tips from fonnesbeck <http://nbviewer.ipython.org/urls/gist.github.com/fonnesbeck/5850463/raw/a29d9ffb863bfab09ff6c1fc853e1d5bf69fe3e4/3.+Plotting+and+Visualization.ipynb>
+
 ##Quotes
 * as soon as you're in the smartest person in the room, go to another room.
 * if there isn't anyone in the room who's weird or terrible, it's probably you.
@@ -980,6 +1306,26 @@ Bug out bag                                              $500
 red turtleneck, button down shirt (pink or blue,          $50
 with some sort of texture), dark blue pants, 
 awesome shoes.
+
+-------------------------------------------------------------
+
+Steel house inspired by the farnsworth house. Doable, but needs:
+
+* railings
+* sprinkler system
+* hvac but still with radiant heat floors
+* basement with garage like the olnick spanu house
+* slate and black with wood ceilings and accents like the ben rose house
+* steel is rusted then treated with phosphoric acid
+* maybe a little more depth in the roof to allow for things like vents
+* less glass for privacy, but preserve the golden ratio
+* built off the edge of a ravine, more of the ravine than on it, though.
+* it's a glass house, so not worth it unless there's a view.
+* "one large room with freestanding elements taht provide differentiation within a free space"
+* look at Crown Hall for inspiration.
+* sound proofing and consider interior acoustics.
+* column free with cantilevered perimeter.
+* somehow make it awesome and livable. not sure how to do this (drafts, cold, heat) with all that glass.
 
 -------------------------------------------------------------
 

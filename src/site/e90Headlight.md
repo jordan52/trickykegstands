@@ -23,9 +23,11 @@ order or just order both and return one.
 
 Someone on some forum said OEM Xenon bulbs are 4300K. I do not know if
 this is true, but the specs for the Philips D1S Xenon Standard 85410C1
-said it was 4300k and seems to match the existing light. I bought it
-[here](http://www.amazon.com/gp/product/B00480KP6M?ie=UTF8&tag=trickykegstan-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B00480KP6M)![](http://www.assoc-amazon.com/e/ir?t=trickykegstan-20&l=as2&o=1&a=B00480KP6M)
-for \$54. Way cheaper than the \$119 AutoZone wanted. I couldn't find a
+said it was 4300k and seems to match the existing light. 
+
+##I bought it [here](http://www.amazon.com/gp/product/B00480KP6M?ie=UTF8&tag=trickykegstan-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B00480KP6M) for \$54. 
+
+Way cheaper than the \$119 AutoZone wanted. I couldn't find a
 temperature on the Sylvania bulbs which is why I chose Philips.
 
 ![](media/e90Headlight01.jpg)
