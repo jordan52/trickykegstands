@@ -1,4 +1,4 @@
-#Checklists
+#Checklist
 
 ##How to build this document
 * use pandoc via the trickykegstands makefile
@@ -21,7 +21,7 @@ greenmachinesmidwest.com Jim             S3             Route 53
 jordan-rhonda.com        me              S3             Route 53
 menfacingdivorce.com     me              tumblr         GoDaddy
 menseekingdivorce.com    me              NOT USED
-rockuniform.com          me              Unknown        J.Kammerer
+rockuniform.com          me              tumblr         NO CLUE!?!
 thesorrypeople.com       me              107.21.228.187 Route 53
 thewoerndles.com         me              S3             Route 53
 trickykegstands.com      me              S3             Route 53
@@ -323,7 +323,7 @@ Update /etc/init.d/tomcat6 to only find the sun 7 jdk
 edit server.xml - uncomment the 8443 sections
 by default on os x, the server will look for the key in ~/ with a password changeit. so, open a terminal, cd to ~/ and type
 keytool -genkey -alias tomcat -keyalg RSA
-start tomcat
+start tomcat.
 
 
 ##Get Postgres to accept external connections
@@ -592,6 +592,12 @@ based-on-patters
 
 find . -name "\*old\*" -exec bash -c "mv \$1 \'echo \$1 | sed s/old/new/\'" - {} \;
 
+* write a large file filled with zeros on a mac dd if=/dev/zero of=output.dat bs=1024 count=10000000
+* say you want to run it in the background then watch it run.
+* nohup dd if=/dev/zero of=zeros.dat bs=1024 count=10000000&
+* then run watch -n 5 --differences ls -lah
+* or you could run watch -n 5 kill -USR1 \<pid\>
+
 * Reroute port 8080 to 80
 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
 then run
@@ -604,8 +610,32 @@ iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 8
 * find current mecurial changeset id 
 hg id -i
 
+* install git flow, download curl -L -O https://raw.github.com/nvie/gitflow/develop/contrib/gitflow-installer.sh then run the installer
+* use git flow (gitflow) git flow release track 1.2.0
+
+* use ab (apache benchmark) to hammer a site.  apt-get install apache-utils then run something like ab -C JSESSIONID:7EA6B312FB939E02957BD4B5AA897165 -k -n 10 -c 10 -t 20 "https://192.168.1.10:8443/uspto/examinerAllowanceRate?art=&examiner_id=1424&includeContinuation=true&includeForeign=true&sampleReport=false"
+
+* mount a ext3 or ext4 (or ntfs) drive on os x using fuse for ox and fuse-ext2
+* install OSXFUSE i got 2.6.2 be sure to check the MACFUSE Compatability Layer option which shows up in the 4th step of the installation wizard.
+* install fuse ext2-0.0.7 <http://sourceforge.net/projects/fuse-ext2/>
+* connect the drive. use disk utility or run the command diskutil list to see what appears. it will look something like disk2s2
+* make a new folder as a mount point
+* fuse-ext2 /dev/disk2s2 /Volumes/mountpoint which will mount it readonly. if you need to write:
+* fuse-ext2 -o force /dev/disk2s2 /Volumes/mountpoint
+* I assume the method for ntfs is similar
+* there will be icons for osxfuse and fuse ext2 in system preferences. use those to uninstall/upgrade.
+
+* make a bootable usb ubuntu install disk from iso on os x - <http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx>
+
 * do a word count inside eclipse
 file search, select the file, enable regex and search for \\w+
+
+* pretty print some json similarly, you can get a janky json pretty printer by doing:
+*    curl -s http://some/json/url | python -m json.tool
+
+* mdfind on os x is like locate on linux.
+
+* hold option and click a position in the current line to move your cursor to that position.
 
 * do a multiline (vertical) edit in eclipse.
 select a block of text by placing your cursor where you want the edit to start and dragging straight down, option/command/A then edit away
@@ -619,8 +649,6 @@ sed -n -e 's/^.*New\ York\///p' newYorkCases.txt > newYorkCasesCleaned.txt
 
 * use macvim as a quick diff between files:
 mvim -d motions.jsp marketing.jsp 
-
-* list all open files on a volume (useful when trying to eject a drive)  sudo lsof "/Volumes/1TB"
 
 * create a user in ubuntu
 
@@ -908,33 +936,6 @@ GRANT ALL ON `%`.* TO postgres@`%`;
 
 solution found <http://www.fidian.com/problems-only-tyler-has/using-grant-all-with-amazons-mysql-rds> and here <https://sagebionetworks.jira.com/wiki/display/PLFM/Setting+up+AWS+RDS+(MySQL)+for+Synapse>
 
-##To start a business
-
-<http://www.sba.gov/content/follow-these-steps-starting-business>
-<http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Checklist-for-Starting-a-Business>
-
-* Apply for EIN <http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Missouri-3>
-
-* register in your state.
-* register in your local city
-* Get a DBA (doing business as)
-* Physical address
-* Mailing address
-* LLC
-* Terms of service
-* SSL cert
-* Ability to accept payment
-* Quickbooks
-* Bank account
-* Credit card
-* Tax id
-* Accountant
-* Start paying quarterly taxes, self emplyment tax,
-* Logo/branding
-* PR agency - pay one to get your name out.
-* Bug tracker as a todo list
-* Visitor log in office
-
 ##Using pandoc
 * Install it... dmg package, or available in distros apt-get, etc.
 * if you are using a mac and plan to use latex or tex or generate a PDF, go [here](http://www.tug.org/mactex/morepackages.html) and download basictex. install it. open a command line and run sudo tlmgr update --self then run sudo tlmgr install dvipng (that's more for getting anki2 to run properly!) then you'll be all set for generating pdfs.
@@ -1133,11 +1134,32 @@ org.codehaus.cargo:cargo-maven2-plugin:redeploy in my pom. add what you need to 
 * unzip it to /usr/local/share
 * symlink it to /Library/Tomcat (I cannot 100% remember why i did that)
 
+##install and format a new drive on linux ubuntu unix whatever
+* attach the drive via usb
+* watch dmesg to see what device it ends up being, in my case today it was /dev/sdc
+* OR you could use lshw -C disk to list all attached disks
+* * sudo fdisk /dev/sdc
+* l (list partitions)
+* d (delete any partitions that are on there)
+* n (create new parition)
+* p (primary)
+* 1 (one partition)
+* w (write changes)
+* q (quit)
+* mkfs -t ext3 /dev/sdc1 (format an ext3 filesystem)
+* 
+
 ##Install sbt on my mac
 * download it
 * unzip it to /usr/local/share
 * nano .bash_profile to add /usr/local/share/sbt/bin to the path
 * done
+
+##Install 7zip on my mac from source
+* download source tarball from sourceforge.
+* cd to that directory, type make.
+* cp target/7za /opt/bin
+* run 7zip using 7za
 
 ##Install tmux on my mac
 mkdir /jordan/projects/code/tmux
@@ -1158,8 +1180,6 @@ make
 sudo make install
 
 You now have to run it using /opt/rin/tmux
-
-add the path to .bash_profile
 
 ##Install Pathogen and solarized into macvim (or vim for that matter)
 mkdir -p ~/.vim/autoload ~/.vim/bundle; \
@@ -1187,10 +1207,6 @@ mkdir ctags; cd ctags
 really just follow instructions from <http://thomashunter.name/blog/installing-vim-tagbar-with-macvim-in-os-x/>
 
 then to use it hit esc \y <return> when you're in a file.
-
-## install pandas scipy ipython pythonnotebook pandas numpy matplotlib scipy scikit pymc
-* download the ScipySuperpack from the interenets. MAKE SURE YOU GET THE RIGHT VERSION FOR YOUR OS. i tried installing the os x 10.9 version on 10.8.5 and it caused all kinds of headaches.
-* to start ipython notebook run "sudo ipython notebook" be aware where your notebooks are stored and check the command line messages to see which profile is being used. URI is http://127.0.0.1:8888/ 
 
 ##Install HBase on my mac
 * download it
@@ -1245,31 +1261,73 @@ compare two text files to see which lines only exist in the first file: comm -23
 remove all quotes from a file: sed s/\"//g monsantoTitlesInDatabaseSorted.txt > monsantoTitlesInDatabaseSortedNoQuotes.txt
 put a comma at the end of every line of a file: sed "s/$/,/g" syngentaAppnos.txt  > syngentaAppnosWithComma.txt
 remove all newlines from a file: tr -d '\n' < syngentaAppnosWithComma.txt >syngentaAppnosOneLine.txt
+remove leading zeros from every line of a file sed -e 's/^[0]*//' boeingBobSorted.txt > boeingBobSortedStrippedLeading.csv
+grep a file for every line that doesn't start with a match. here i was coming through an apache log file looking for ips that weren't mine grep -v '^216.43.16.195' access.log | grep -v '^127.0.0.1' | less +G
+show lines from one file that are not present in the other file
+comm -23 a.txt b.txt
+By default, comm outputs 3 columns: left-only, right-only, both. The -1, -2 and -3 switches suppress these columns.
 
-to delete a whole line out of a file that starts with a certain string, do this:
-grep -v '^lineStartsWithThis' infile.txt > outfile.txt
-or use awk:
-awk '!/^linestartswiththis' infile.txt > outfile.txt
-
-now, delete a word from each line in a file using awk:
-awk '{gsub("the words to delete", "");print;}' input > output
-
-now use sed to delete everything on the line after the word number. this deletes all the spaces before number, too:
-sed 's/ *numb.*//' stripped3.txt > stripped4.txt
-
-now I want to delete every other newline, omit the -d ' ' option if you want them separated by a tab
-
-cat stripped4.txt | paste -d ' ' - -
 
 #Patent Data
 <http://www.google.com/googlebooks/uspto-patents.html>
 In CaseLoader's ConvertToJson, we have a program that extracts the XML from the PAIR files into JSON which is then shoved into elasticsearch.
 In NodeThrowaway we have code that queries ES by assignee to figure out which companies have the most patents.
 
-#Pandas
+#So You Want to Start a Company
 
-* tips for scatter plots <http://stackoverflow.com/questions/14300137/making-matplotlib-scatter-plots-from-dataframes-in-pythons-pandas>
-* plotting tips from fonnesbeck <http://nbviewer.ipython.org/urls/gist.github.com/fonnesbeck/5850463/raw/a29d9ffb863bfab09ff6c1fc853e1d5bf69fe3e4/3.+Plotting+and+Visualization.ipynb>
+<http://www.sba.gov/content/follow-these-steps-starting-business>
+<http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Checklist-for-Starting-a-Business>
+
+* Get a Lawyer
+* Get an Accountant
+* Set up Quickbooks online
+* Get an Address (small office? coworking space? ups box?)
+* Name your company and select a DBA
+* Create a company LLC/Inc. you probably want an LLC. put enough $ into it to get through the next steps.
+* Get your federal id (Apply for EIN <http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Missouri-3>)
+* Register in your state
+* register/license in your city
+* Start a bank account and open a credit card
+* Buy/Transfer the domain into the company's name
+* Trademark the name
+* Create infrastructure. decide on a provider (aws? digital ocean? colocation) and create accounts. you can't beat route53, SES(maybe sendgrid, postmark),& S3. use chef or some variant. automate backup and script restores.
+* private github or bitbucket
+* Manage your keys.
+* You'll want to run mysql, postgres, elasticsearch, web server, nagios, graylog
+* Buy an SSL cert
+* figure out deployment
+* Bring up a social media server (website on a CMS which includes a blog, manage twitter, linked-in, vine, etc)
+* figure out local computing and storage. probalby just need a few external drives and a rock solid plan. AUTOMATE BACKUPS.
+* figure out your email addresses (google apps for businesses)
+* figure out analytics (mixpanel, google analytics)
+* figure out monitoring (pingdom, nagios, pagerduty, munin to keep things running)
+* figure out versioning (bitbucket or github)
+* figure out project management (pivitol tracker, basecamp, atlassian, redmine, time tracker like tick?)
+* you will have a team soon. you'll need to communicate. google drive, a shared dropbox folder and hipchat (Asana?) will get you far.
+* start tracking your metrics, automate it from the get-go.
+* get a phone number (google voice?)i
+* get office supplies like folders, dividers, tape, scissors, hole punch, binders, stamps, envelopes.
+* get dry erase markers and a board if you need it.
+* get a good printer/scanner
+* Get support of local people ($, media, mentors)
+* Write a terms of service
+* Create a Stripe account
+* Enable the ability to accept payment.
+* learn how to invoice and set up a process
+* enable user feedback, help, and support. (jira issue collector-like thing and phone/email support)
+* hire a designer to make your logos and an initial design.
+* Due Dilligence Package (cap table) automate cash flow analysis and accounting statements, integrate this with metrics.
+* If you have employees or pay yourself a salary hire a payroll service 
+* expense reporting, how do you manage that?
+* automate the payment/calculation of quarterly taxes on income
+* PR agency - pay one to get your name out.
+* insurance, get it
+* ...
+* profit
+* ...
+* Visitor log in office
+
+##how do you enable the ability to accept payment
 
 ##Quotes
 * as soon as you're in the smartest person in the room, go to another room.
@@ -1297,11 +1355,13 @@ Get the 928 Running OK                                 $5,000
 
 A good office chair                                      $700
 
+Generator                                               $1000
+
 lock picking tools                                       $100
 
 Firstarter (flint/steel)                                  $10
 
-Bug out bag                                              $500
+Bug out bag and a four wheeler or dirt bike             $1500
 
 red turtleneck, button down shirt (pink or blue,          $50
 with some sort of texture), dark blue pants, 
@@ -1313,6 +1373,7 @@ Steel house inspired by the farnsworth house. Doable, but needs:
 
 * railings
 * sprinkler system
+* security system including cameras. wired throughout
 * hvac but still with radiant heat floors
 * basement with garage like the olnick spanu house
 * slate and black with wood ceilings and accents like the ben rose house
@@ -1337,7 +1398,6 @@ Steel house inspired by the farnsworth house. Doable, but needs:
 * basement
 * gutters
 * car maintenance
-
 
 * skid steer the yard
 * gutters

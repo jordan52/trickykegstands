@@ -1,5 +1,114 @@
 ### Today I Learned
 
+#### 2014 01 21
+
+set up a fresh wordpress box
+<http://plusbryan.com/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers>
+<https://www.digitalocean.com/community/articles/how-to-install-wordpress-nginx-php-and-varnish-on-ubuntu-12-04>
+<https://www.digitalocean.com/community/articles/how-to-create-a-ssl-certificate-on-nginx-for-ubuntu-12-04>
+<https://www.digitalocean.com/community/articles/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-12-04>
+and then i set up nginx to 301 redirect all http traffic to https by adding this to /etc/nginx/sites-available/wordpress
+server {
+        listen   80;
+        return 301 https://$host$request_uri;
+}
+
+#### 2014 01 15
+
+links for setting up a happaugue wintv 2500 capture card on Linux
+
+<http://us.generation-nt.com/answer/watch-tv-capture-video-linux-help-199290471.html?page=3>
+<http://ubuntuforums.org/archive/index.php/t-1567490.html>
+<http://www.mythtvtalk.com/hvr-2250-ubuntu-12-04-mythtv-0-25-installation-16023/>
+<http://marksnotebook.com/PVR-150_capture>
+<http://ubuntuforums.org/showthread.php?t=1734916>
+<http://www.linuxquestions.org/questions/ubuntu-63/zoneminder-1-24x-ubuntu-10-04-pal-ntsc-cameras-pv-981-8-port-811014/>
+<http://www.mythtv.org/wiki/IVTV_Install#Creating_device_entries>
+<http://ubuntuforums.org/archive/index.php/t-1567490.html>
+<http://webcache.googleusercontent.com/search?q=cache:TptevPja3fIJ:blog.gmane.org/gmane.linux.drivers.pvrusb2%3Fset_lines%3D100000+&cd=5&hl=en&ct=clnk&gl=us>
+
+I gave up and bought a PV-143 from blue cherry.
+
+apt-get install zoneminder
+apt-get install x264
+ln -s /etc/zm/apache.conf /etc/apache2/conf.d/zoneminder.conf
+adduser www-data video
+service zoneminder restart
+
+/dev/video0
+maximum fps 5.0
+alarm maximum fps 5.0
+reference image blend %ge 7
+
+channel 0-4
+NTSC
+BGR24 which isn't correct
+640
+480
+
+captures per frame on options->config needs to be 4
+
+fix shared memory problem
+echo 536870912 >/proc/sys/kernel/shmmax
+
+i might have done this options bttv card=77 tuner=4 radio=0 triton1=0 vsfx=0 autoload=0 in modprobe.d/bttv.conf but I don't know...
+
+comment out all ScriptAlias directives in all the files under /etc/apache2/ (do a grep to find them)
+fix the scriptalias in /etc/zm/apache.conf by adding ScriptAlias /cgi-bin "/usr/share/zoneminder/cgi-bin"
+
+i doubt the scriptalias thing has anything to do with the sockets problem.
+
+
+#### 2014 01 09
+
+"Nickel and diming yourself to a partial success"
+
+<http://colorbrewer2.org/#> for picking chart colors.
+
+<http://tohtml.com/java/> for pasting your code into gmail
+
+#### 2014 01 05
+
+I may say that this is the greatest factor—the way in which the expedition is equipped—the way in which every difficulty is foreseen, and precautions taken for meeting or avoiding it. Victory awaits him who has everything in order — luck, people call it. Defeat is certain for him who has neglected to take the necessary precautions in time; this is called bad luck.
+— from The South Pole, by Roald Amundsen
+
+google image search "As the Old Sing, So Pipe the Young”
+
+#### 2014 01 04
+
+to find the energy at a particular freq, spin your signal around a circle at that freq and average some points around that path - fourier x
+
+#### 2014 01 03
+
+three philosophers quadrupel
+
+#### 2014 01 01
+
+#{systemProperties['RDS_HOSTNAME']}
+
+#### 2013 12 22
+
+"i am becaus ew e are"
+
+WGD4800BQ
+WGD4800BQ
+
+#### 2013 12 21
+
+"The girls in the video were cast by people who didn’t quite understand what they were engaged in culturally." <http://www.vulture.com/2013/12/sir-mix-a-lot-baby-got-back-video-oral-history.html>
+
+#### 2013 12 19
+
+Jonathan Lebed <http://www.nytimes.com/2001/02/25/magazine/jonathan-lebed-s-extracurricular-activities.html>
+
+#### 2013 12 18
+
+We produce great quality work in an asbestos rich environment.
+
+#### 2013 12 17
+
+opportunistic but not goal oriented.
+
 #### 2013 12 10
 
 that accounting class I never finished <https://class.coursera.org/accounting-001/lecture/index>

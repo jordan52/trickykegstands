@@ -1,5 +1,13 @@
 ### Something Funny Happened Today
 
+#### 2014 01 17
+
+(This was hilarious in my mind. It happened in 2009)
+
+I was out to lunch with some work friends (sadly, not really friends, just cool people I would have liked to have hung out with outside of work) and someone at the table said, "What are you doing for Yom Kippur today?" I had no idea it was Yom Kippur but I was 2 vietnamese coffees deep so I said the first thing that came to mind. I was reading "American Psycho" and the only thing in my brain about Yom Kippur was "day of atonement" so I said, "Oh, I don't know, I'll probably  watch Atonement and return it along with some other video cassette tapes."
+
+Nobody knew it was a joke.
+
 #### 20130205
 
 This page is taking a dark turn. Some background - 1) I was doing outdoorsy stuff with some 
