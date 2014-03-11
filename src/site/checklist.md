@@ -21,7 +21,6 @@ greenmachinesmidwest.com Jim             S3             Route 53
 jordan-rhonda.com        me              S3             Route 53
 menfacingdivorce.com     me              tumblr         GoDaddy
 menseekingdivorce.com    me              NOT USED
-rockuniform.com          me              tumblr         NO CLUE!?!
 thesorrypeople.com       me              107.21.228.187 Route 53
 thewoerndles.com         me              S3             Route 53
 trickykegstands.com      me              S3             Route 53
@@ -179,6 +178,12 @@ it.
 
 
 ##Backup Rhonda's Laptop
+
+* go to windows 7 file recovery in the control panel. bottom left click "windows 7 file recovery"
+* set the file location (a hard drive)
+* click back up now.
+* I sometimes find the files on the drive and move them to a different location. not sure if that is smart
+*
 
 ##Clone Backup Drives
 
@@ -552,7 +557,9 @@ use xrdp to serve the host so I can connect to it via rdp too
 * BUT RDC SUCKS. So, I installed realvnc server on XP and realvnc client on 
 my mac. Just use realvnc to connect to 192.168.1.90
 
-
+## ipython notebook
+* I did the typical install steps AND i found a shell script written by one of the pandas guys (wes?) that installed pandas, numpy, and scipy. I didn't write those steps down because it was simple... and i forgot. or I wrote them down somewhere else. To start ipython notebook cd /jordan/projects/code/ipythonNotebooks and run "ipython notebook" this will start the process, open a tab in your browser and show you all the notebooks you have stored in that directory.
+* tlrd - run ipython notebook in /jordan/projects/code/ipythonNotebooks
 ##Misc Commands
 
 * Copy a file to the mac clipboard
@@ -633,7 +640,11 @@ file search, select the file, enable regex and search for \\w+
 * pretty print some json similarly, you can get a janky json pretty printer by doing:
 *    curl -s http://some/json/url | python -m json.tool
 
-* mdfind on os x is like locate on linux.
+* mdfind on os x is like locate on linux or if you want to use spotlight from the command line.
+
+* <http://colorbrewer2.org/> for picking chart colors
+
+* <http://tohtml.com/java/> for pasting your code into gmail
 
 * hold option and click a position in the current line to move your cursor to that position.
 
@@ -1039,6 +1050,8 @@ service nagios-nrpe-server restart
 to use the mon_host param provided in the nodes/nagiosClient.json config file to pass
 to the allowed_hosts param in npre.cfg. it works. i haven't used this in a recipe much
 
+On a new box (not configured with chef) I followed this <https://help.ubuntu.com/12.04/serverguide/nagios.html> and was getting a permissions error on the disk check (failed on .gvfs file in my home directory) So, i followed this <https://help.ubuntu.com/community/Nagios3> in the Post Install Tasks (edit disk.cfg in the plugins directory) and it fixed the problem. I also had to edit the mysql create user statement to say mysql -u root -p -e "create user 'nagios'@'localhost' identified by 'secret';"
+
 
 ##Host set up FQDN fully qualified domain name
 * hostname -f  to check what it is set to
@@ -1252,6 +1265,13 @@ My notes are here <http://trickykegstands.com/virtualBoxVmsCloningHowTo.html>
 
 ssh -i ~/Downloads/proxy.pem -D 2001 ubuntu@
 
+#use wustl proxy to access papers
+
+1. go to the site where the paper is located, such as http://iopscience.iop.org/0034-4885/43/7/001/pdf/0034-4885_43_7_001.pdf
+then paste this into your url:
+
+2. javascript:void(location.href="http://libproxy.wustl.edu/login?url="+location.href)
+
 #bootstrap docs for older versions:
 http://bootstrapdocs.com/v2.2.2/docs/base-css.html#forms
 
@@ -1259,6 +1279,8 @@ http://bootstrapdocs.com/v2.2.2/docs/base-css.html#forms
 make a text file all lower case: tr '[:upper:]' '[:lower:]' < monsantoTitlesInDatabaseSortedNoQuotes.txt  > monsantoTitlesInDatabaseSortedNoQuotesUpcase.txt
 compare two text files to see which lines only exist in the first file: comm -23 monsantoTitlesAllSorted.txt monsantoTitlesInDatabaseSortedNoQuotes.txt
 remove all quotes from a file: sed s/\"//g monsantoTitlesInDatabaseSorted.txt > monsantoTitlesInDatabaseSortedNoQuotes.txt
+add single quotes around each line of a file sed "s/\(.*\)/'\1'/" infile > outfile
+add single quotes and a comma at the end of each line of a file sed "s/\(.*\)/'\1',/"
 put a comma at the end of every line of a file: sed "s/$/,/g" syngentaAppnos.txt  > syngentaAppnosWithComma.txt
 remove all newlines from a file: tr -d '\n' < syngentaAppnosWithComma.txt >syngentaAppnosOneLine.txt
 remove leading zeros from every line of a file sed -e 's/^[0]*//' boeingBobSorted.txt > boeingBobSortedStrippedLeading.csv
@@ -1267,6 +1289,28 @@ show lines from one file that are not present in the other file
 comm -23 a.txt b.txt
 By default, comm outputs 3 columns: left-only, right-only, both. The -1, -2 and -3 switches suppress these columns.
 
+# insert OR update in mysql:
+INSERT into queue (appno, priority, force_update) values (9533441, 52, 1) on duplicate key update priority=values(priority), force_update=values(force_update);
+
+# use sqlite to operate on a csv file with sql commands
+
+sqlite3 /tmp/mydb <<EOF
+.import myfile.csv mytable
+.headers on
+.mode csv
+.output outfile.csv
+select * from mytable where num_investments < 3;
+EOF
+
+
+
+##mac unix2dos and dos2unix
+<http://stackoverflow.com/questions/6373888/converting-newline-formatting-from-mac-to-windows>
+sed -e 's/$/\r/' inputfile > outputfile                # UNIX to DOS  (adding CRs)
+sed -e 's/\r$//' inputfile > outputfile                # DOS  to UNIX (removing CRs)
+perl -pe 's/\r\n|\n|\r/\r\n/g' inputfile > outputfile  # Convert to DOS
+perl -pe 's/\r\n|\n|\r/\n/g'   inputfile > outputfile  # Convert to UNIX
+perl -pe 's/\r\n|\n|\r/\r/g'   inputfile > outputfile  # Convert to old Mac
 
 #Patent Data
 <http://www.google.com/googlebooks/uspto-patents.html>
@@ -1278,19 +1322,25 @@ In NodeThrowaway we have code that queries ES by assignee to figure out which co
 <http://www.sba.gov/content/follow-these-steps-starting-business>
 <http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Checklist-for-Starting-a-Business>
 
-* Get a Lawyer
-* Get an Accountant
+* read this <http://betabeat.com/2014/02/the-100-rules-for-being-an-entrepreneur/>
+* also read this (not amazing, but somewhat good) <http://www.forbes.com/sites/quora/2012/12/20/whats-the-secret-to-a-successful-coffee-shop/>
+* Set aside enough $ to get through the following steps. Put it in an envelope for now.
+* Get a Lawyer get a W-9 from them
+* Get an Accountant get a W-9 from them
 * Set up Quickbooks online
 * Get an Address (small office? coworking space? ups box?)
-* Name your company and select a DBA
-* Create a company LLC/Inc. you probably want an LLC. put enough $ into it to get through the next steps.
+* Name your company and select a DBA if necessary.
+* MAKE IT A PRIOIRTY TO GET A W-9 FROM ANYONE YOU WORK WITH.
+* Create a company LLC/Inc. (have your lawyer and accountant decide which is best) put enough $ into it as the initial investment to get through the next steps. This step produces a series of documents such as the operating agreement, by-laws, or partnership agreement.
 * Get your federal id (Apply for EIN <http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Missouri-3>)
+* Fill out your own W-9 because you'll likely have to fill out a ton of them, so why not practice.
 * Register in your state
 * register/license in your city
-* Start a bank account and open a credit card
+* Start a bank account and open a credit card. move the cash from the envelope into the bank account.
 * Buy/Transfer the domain into the company's name
 * Trademark the name
 * Create infrastructure. decide on a provider (aws? digital ocean? colocation) and create accounts. you can't beat route53, SES(maybe sendgrid, postmark),& S3. use chef or some variant. automate backup and script restores.
+* organize your subdomains. mysql.domain.com, postgres.domain.com, wordpress.domain.com, app.domain.com, etc.
 * private github or bitbucket
 * Manage your keys.
 * You'll want to run mysql, postgres, elasticsearch, web server, nagios, graylog
@@ -1299,7 +1349,7 @@ In NodeThrowaway we have code that queries ES by assignee to figure out which co
 * Bring up a social media server (website on a CMS which includes a blog, manage twitter, linked-in, vine, etc)
 * figure out local computing and storage. probalby just need a few external drives and a rock solid plan. AUTOMATE BACKUPS.
 * figure out your email addresses (google apps for businesses)
-* figure out analytics (mixpanel, google analytics)
+* figure out analytics (mixpanel, google analytics) and get it right!
 * figure out monitoring (pingdom, nagios, pagerduty, munin to keep things running)
 * figure out versioning (bitbucket or github)
 * figure out project management (pivitol tracker, basecamp, atlassian, redmine, time tracker like tick?)
@@ -1317,11 +1367,12 @@ In NodeThrowaway we have code that queries ES by assignee to figure out which co
 * enable user feedback, help, and support. (jira issue collector-like thing and phone/email support)
 * hire a designer to make your logos and an initial design.
 * Due Dilligence Package (cap table) automate cash flow analysis and accounting statements, integrate this with metrics.
-* If you have employees or pay yourself a salary hire a payroll service 
-* expense reporting, how do you manage that?
-* automate the payment/calculation of quarterly taxes on income
+* If you have employees or pay yourself a salary? Hire a payroll service.
+* if you hire contractors, either know how to do the 1099 (and DO NOT FORGET, due by JAN 31) or hire a payroll service.
+* expense reporting, how do you manage that? how do you manage entering receipts,payments, and income into quickbooks?
+* automate the payment/calculation of quarterly taxes.
 * PR agency - pay one to get your name out.
-* insurance, get it
+* insurance, get it. What kind of insurance do you need? Ask your lawyer.
 * ...
 * profit
 * ...
@@ -1415,3 +1466,11 @@ post test
 ##appliances
 dishwasher model number is kuds30ixss1 - here's some parts online - [here](http://www.searspartsdirect.com/partsdirect/part-model/Kitchenaid-Parts/Dishwasher-Parts/Model-KUDS30IXSS1/0593/0130000/W1102063/00002?blt=06&prst=&shdMod=)
 
+I said to myself, "I've never worked so hard for anything in my life." and then I reminded myself that I have worked this hard for everything since that day of my sophomore year in high school when my dad said, "you don't have anything which means you don't have anything to lose. Why not go out there and do things?" I did. 
+
+
+We've had a snowy winter this year. While I was stuck in traffic on a snow day that turned my 40 minute commute into an hour and a half I noticed the anger I was starting to feel for people who were so very worried about the snow and the dangers it posed. I think it was after I read the tenth facebook post that said something about being so worried about people driving out in this stuff. I am having trouble articulating it here, but at that moment I shifted my thoughts around and realized that it might not be so much the fear of wrecking a car or running out of food. Sure, we attribute the fear to those concrete examples and rationalize them as being something real. But, when 1" of snow brings an entire city to a standstill, when the grocery stores run out of staples that are always just there, I think we realize how delicately balanced our daily lives are and how they depend  
+
+
+
+ 

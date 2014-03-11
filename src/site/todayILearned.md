@@ -1,5 +1,92 @@
 ### Today I Learned
 
+## 2014 03 11
+
+What are we really doing? We are a part of this sort of distributed research and development service for large companies. That is, independent firms give us capital to perform R&D that probably should be funded by the acquiring company, but isn't for whatever reason (acquirer can't allocate resources due to risk) so, the burden of that risk is shifted to us, the entrepreneurs, and our investors, who somehow can bear that risk because they are properly diversified. The acquiring companies have to be good at absorbing this new, external innovation, without smothering it. Read this: <http://www.forbes.com/sites/mgiresearch/2014/03/04/the-future-of-venture-capital-tech-valuations-and-the-fate-of-tech-incumbents-conversation-with-bill-janeway/>
+
+Let's talk about a TSLA analysis.
+
+Their market is ev's, power train, batteries, IP, and engineering.
+
+Look at their suppliers, first.
+Look at their patent portfolio.
+
+Figure out their licensing deals (what tech do they buy? what tech do they sell?)
+
+Look at their general numbers.
+
+Look at appl and how they can benefit from battery tech.
+Look at all industires who can benefit from battery tech. Who owns that IP? Who are their competitors? What supply issues are in place?
+
+How does the energy storage market compare to the EV market?
+
+what happens when too many EV's are on the road and people reliant on fuel taxes? like, when is that tipping point?
+
+who competes on tsla's patent portfolio? As in, if tsla has something important enough to patent, they're probably using the tech, who has similar tech and who builds it and how are they doing?
+
+what suppliers do other EV and battey users use? How are those companies doing? 
+
+How about Tata motors? Chinese manufacturers?
+
+
+## 2014 03 10
+
+<http://en.wikipedia.org/wiki/Percolation_threshold>
+
+## 2014 02 28
+
+<http://www.evanmiller.org/linear-regression-for-fun-and-profit.html>
+<http://econbrowser.com/archives/2014/02/use-of-logarithms-in-economics>
+
+## 2014 02 22
+
+still trying to figure out what was trying to figure out yesterday. I stumbled upon a course called "Model Thinking" on coursera by Scott Page at the U of Michigan. It is all kinds of awesome. you should check it out. Today I learned, "All finite, deterministic systems are guaranteed to cycle" after learning about cellular automata which is the ones and zeros qarl had on his site. Things are starting to make sense. 
+
+## 2014 02 21
+
+I'm wrestling with an idea that involves truth tables, decision matrices, simple 2x2 matrix. do an image search for "truth table xor". I love the idea of having your inputs on the left and a single output column on the right.  the 2x2 matrix is good to visualize clusters, throw a quadrant over the top to identify groups of the items that have a specific kind of trait (slow and dumb vs fast and dumb vs smart and slow vs smart and fast.) Finally, go to the wikipedia page for decision matrix. Then try to help me figure out what I'm trying to figure out. 
+
+let's make a list of startups and what they did to make it happen
+
+just works | fast | shiny | first to market | iteration of an old idea | 
+   X       |  X   |       |                 |          X               | whatsapp
+   X       |      |       |        X        |                          | dropbox
+
+etc... i don't know where I'm going with that besides it is a contrived illustration of maybe how this can help me make sense of the world and present these thoughts in a way other people can understand/critique. There might also be ways to solve these in an algorithmic way, see <http://en.wikipedia.org/wiki/Multi-criteria_decision_analysis>.
+
+so, maybe a system of cheat sheets, checklists, and decision matrixes with truth tables and 2x2 
+
+## 2014 02 13
+sickbeard plex roku, netflix and hulu+. mythtv for over the air.
+
+## 2014 02 10
+
+<https://github.com/pymc-devs/pymc/wiki>
+
+
+## 2014 02 05
+
+some scalable infastructures:
+<http://www.hakkalabs.co/articles/big-small-hot-cold-data-needs-robust-pipeline>
+<http://highscalability.com/blog/2014/1/28/how-next-big-sound-tracks-over-a-trillion-song-plays-likes-a.html>
+
+## 2014 02 01
+
+bon iver
+owen - the ghost of what should have been https://www.youtube.com/watch?v=0soTCY7qT2g&list=RD_Mn5TeV0aS0
+sujfan stevens
+mclusky
+lost in the trees
+chvrches
+album - american football https://www.youtube.com/watch?v=Mr_DMGZ-JrY
+listener https://www.youtube.com/watch?v=K8k9rD7lx9c
+old... <https://www.youtube.com/watch?v=Z-fjyEIgWik>
+deer tick - electric https://www.youtube.com/watch?v=4zdzlTqIVTE
+holy fuck https://www.youtube.com/watch?v=DhaRkWfaq10
+future of the left - i am the least of your problems https://www.youtube.com/watch?v=vm_zlqC2zlI
+kopecky family band - heartbeat - https://www.youtube.com/watch?v=Wq-8dxYHnyU
+
+
 #### 2014 01 21
 
 set up a fresh wordpress box
@@ -12,6 +99,11 @@ server {
         listen   80;
         return 301 https://$host$request_uri;
 }
+and then i set up fastcgi cache using the following how tos:
+<https://rtcamp.com/wordpress-nginx/tutorials/single-site/fastcgi-cache-with-purging/>
+<https://www.digitalocean.com/community/articles/how-to-setup-fastcgi-caching-with-nginx-on-your-vps>
+and then I added a swap file:
+<https://www.digitalocean.com/community/articles/how-to-add-swap-on-ubuntu-12-04>
 
 #### 2014 01 15
 
@@ -43,7 +135,7 @@ reference image blend %ge 7
 channel 0-4
 NTSC
 BGR24 which isn't correct
-640
+768
 480
 
 captures per frame on options->config needs to be 4
@@ -51,9 +143,8 @@ captures per frame on options->config needs to be 4
 fix shared memory problem
 echo 536870912 >/proc/sys/kernel/shmmax
 
-i might have done this options bttv card=77 tuner=4 radio=0 triton1=0 vsfx=0 autoload=0 in modprobe.d/bttv.conf but I don't know...
-
 comment out all ScriptAlias directives in all the files under /etc/apache2/ (do a grep to find them)
+
 fix the scriptalias in /etc/zm/apache.conf by adding ScriptAlias /cgi-bin "/usr/share/zoneminder/cgi-bin"
 
 i doubt the scriptalias thing has anything to do with the sockets problem.
@@ -63,7 +154,7 @@ i doubt the scriptalias thing has anything to do with the sockets problem.
 
 "Nickel and diming yourself to a partial success"
 
-<http://colorbrewer2.org/#> for picking chart colors.
+<http://colorbrewer2.org/> for picking chart colors.
 
 <http://tohtml.com/java/> for pasting your code into gmail
 
@@ -84,14 +175,13 @@ three philosophers quadrupel
 
 #### 2014 01 01
 
-#{systemProperties['RDS_HOSTNAME']}
+\#{systemProperties['RDS_HOSTNAME']}
 
 #### 2013 12 22
 
 "i am becaus ew e are"
 
-WGD4800BQ
-WGD4800BQ
+WGD4800BQ is the dryer we bought.
 
 #### 2013 12 21
 
