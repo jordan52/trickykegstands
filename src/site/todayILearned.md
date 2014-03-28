@@ -1,5 +1,41 @@
 ### Today I Learned
 
+## 2014 03 28
+Like 15 years ago a friend of mine was explaining to me how Michael Jackson was a brilliant musician and referenced an interview on Oprah where he busted out a song and it was amazing. This showed up today:
+
+<http://lacienegasmiled.tumblr.com/post/77598143356/as-jackson-couldnt-fluently-play-any-instruments> 
+
+and then there was a link to the Oprah interview:
+
+<https://www.youtube.com/watch?v=OcpdmqzNRyE>
+
+holyshit.
+
+and then there was this silly long deposition where he goes in depth about his writing techniques <https://www.youtube.com/watch?v=Jf5xsXWneQs>
+
+## 2014 03 17
+
+Not sure if I put this in here yet, but a while back I purchased yakbuttertea.com. Here are my notes about why:
+
+A game of yak husbandry and hipster domination
+
+Sell manure to the local rooftop farm
+
+Get dinged when the competitor unveils free range yak farming
+
+
+## 2014 03 12
+
+I spent way too much time trying to find this article back <http://qz.com/181552/betaworks-imagines-itself-as-a-book/>I even paid $5 for a feedly pro account so i could search my feed history. it didn't help. "ceo new jersey company annual letter published as a book" were my search terms. no wonder i couldn't find it. i had to dig through my broswer history a day at a time to find this back... derp.
+
+
+<http://betaworks.com/pdf/betaworksShareholderLetter2013.pdf>
+<http://betaworks.com/shareholder/>
+<http://www.anaqua.com/>
+<http://www.youtube.com/watch?v=dFE00CSvpjs&list=PLGqc26s6O0E2P2BnK73JWXk4YYTgl3dmb> stopped at 4:13
+<http://www.stat.columbia.edu/~martin/W2024/R11.pdf>
+
+
 ## 2014 03 11
 
 What are we really doing? We are a part of this sort of distributed research and development service for large companies. That is, independent firms give us capital to perform R&D that probably should be funded by the acquiring company, but isn't for whatever reason (acquirer can't allocate resources due to risk) so, the burden of that risk is shifted to us, the entrepreneurs, and our investors, who somehow can bear that risk because they are properly diversified. The acquiring companies have to be good at absorbing this new, external innovation, without smothering it. Read this: <http://www.forbes.com/sites/mgiresearch/2014/03/04/the-future-of-venture-capital-tech-valuations-and-the-fate-of-tech-incumbents-conversation-with-bill-janeway/>

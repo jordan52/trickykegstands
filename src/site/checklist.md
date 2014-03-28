@@ -132,7 +132,8 @@ the external drive: /Volumes/macBack500GB/Users/jordanOriginal/Documents/Paralle
 * Click "open time machine preferences" if you want to see the progress. Should 
 take approx 40 min.
 
-
+## hack time machine to use a sparse bundle disk image
+I had to do this when time machine decided it could no longer find my backup disk. It hangs at "looking for backup disk". I created a guid partition map journaled filesystem on a sparse bundle image on an external drive. Then I followed the instructions here to get time machine to use it <http://hints.macworld.com/article.php?story=20140308141622774> this is a hack, sure, but it works. I'd like to see if it will work using the original time machine disk that TM now can not find. awesome... in one way, this might work out well. I made a 300GB image on my external, encrypted drive that goes with me everywhere. If I automate the mounting, i can run time machine 24/7. Then, when I rsync my external drive, i simply rsync the sparse bundle, too... hmm. I wonder how tough it is to restore from this hacked TM backup.
 
 ##Create a macBack500GB Drive For Macbook Backups
 
